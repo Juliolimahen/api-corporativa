@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\ClassLibrary1\\CT.Manager.csproj": {}
+    "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Manager\\CT.Manager.csproj": {}
   },
   "projects": {
-    "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\ClassLibrary1\\CT.Manager.csproj": {
+    "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Manager\\CT.Manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\ClassLibrary1\\CT.Manager.csproj",
+        "projectUniqueName": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Manager\\CT.Manager.csproj",
         "projectName": "CT.Manager",
-        "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\ClassLibrary1\\CT.Manager.csproj",
+        "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Manager\\CT.Manager.csproj",
         "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
-        "outputPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\ClassLibrary1\\obj\\",
+        "outputPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Manager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
