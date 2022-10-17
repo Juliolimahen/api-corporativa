@@ -1505,6 +1505,19 @@
         "runtime": {
           "bin/placeholder/CT.Core.dll": {}
         }
+      },
+      "CT.Manager/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CT.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CT.Manager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CT.Manager.dll": {}
+        }
       }
     }
   },
@@ -5726,11 +5739,17 @@
       "type": "project",
       "path": "../CT.Core/CT.Core.csproj",
       "msbuildProject": "../CT.Core/CT.Core.csproj"
+    },
+    "CT.Manager/1.0.0": {
+      "type": "project",
+      "path": "../CT.Manager/CT.Manager.csproj",
+      "msbuildProject": "../CT.Manager/CT.Manager.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "CT.Core >= 1.0.0",
+      "CT.Manager >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.8",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.8",
@@ -5771,6 +5790,9 @@
           "projectReferences": {
             "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj": {
               "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj"
+            },
+            "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Manager\\CT.Manager.csproj": {
+              "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Manager\\CT.Manager.csproj"
             }
           }
         }

@@ -1,4 +1,6 @@
 using CT.Data.Context;
+using CT.Data.Repository;
+using CT.Manager.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +33,8 @@ namespace CT.WebApi
             services.AddControllers();
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IClienteRepository, ClienteRepository>();
 
             services.AddSwaggerGen(c =>
             {

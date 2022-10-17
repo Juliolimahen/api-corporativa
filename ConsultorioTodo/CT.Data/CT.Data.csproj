@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CT.Core\CT.Core.csproj" />
+    <ProjectReference Include="..\CT.Manager\CT.Manager.csproj" />
   </ItemGroup>
 
 </Project>
