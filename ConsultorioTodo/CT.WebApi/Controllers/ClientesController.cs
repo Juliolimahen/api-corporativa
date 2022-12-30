@@ -20,13 +20,13 @@ namespace CT.WebApi.Controllers
                 new Cliente
                 {
                     Id = 1,
-                    Name="Irineu",
+                    Nome="Irineu",
                     DataNascimento=new DateTime(1990,06,10),
                 },
                  new Cliente
                 {
                     Id = 2,
-                    Name="Bea",
+                    Nome="Bea",
                     DataNascimento=new DateTime(1999,06,20),
                 }
             });

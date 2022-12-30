@@ -1826,6 +1826,7 @@
       "CT.Data/1.0.0": {
         "dependencies": {
           "CT.Core": "1.0.0",
+          "CT.Manager": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8"
         },
@@ -1834,6 +1835,17 @@
         },
         "compile": {
           "CT.Data.dll": {}
+        }
+      },
+      "CT.Manager/1.0.0": {
+        "dependencies": {
+          "CT.Core": "1.0.0"
+        },
+        "runtime": {
+          "CT.Manager.dll": {}
+        },
+        "compile": {
+          "CT.Manager.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4451,6 +4463,11 @@
       "sha512": ""
     },
     "CT.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CT.Manager/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
