@@ -6,5 +6,6 @@ namespace CT.Manager.Interfaces
 {
     public interface IClienteManager
     {
+
     }
 }
