@@ -32,7 +32,7 @@ namespace CT.Manager.Validator
             RuleFor(x => x.Telefone)
                 .NotNull()
                 .NotEmpty()
-                .Matches("[2-9][0-9]{10}").WithMessage("O telefone tem que ter o formato [2 - 9][0 - 9]{ 10}");
+                .Matches("[2-9][0-9]{9}").WithMessage("O telefone tem que ter o formato [2 - 9][0 - 9]{9}");
 
             RuleFor(x => x.Sexo).NotNull().NotEmpty().Must(IsMorF).WithMessage("Sexo precisa ser M ou F");
 

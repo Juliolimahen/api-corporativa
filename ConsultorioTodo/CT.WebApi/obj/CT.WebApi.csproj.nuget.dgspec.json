@@ -336,6 +336,10 @@
               "target": "Package",
               "version": "[11.2.2, )"
             },
+            "MicroElements.Swashbuckle.Fluentvalidation": {
+              "target": "Package",
+              "version": "[5.7.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.8, )"

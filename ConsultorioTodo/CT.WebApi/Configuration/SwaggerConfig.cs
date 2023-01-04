@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Swagger;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace CT.WebApi.Configuration
 {
@@ -10,7 +14,32 @@ namespace CT.WebApi.Configuration
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Consultório Todo", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Consultório Todo",
+                    Version = "v1",
+                    Description = "API da aplicação consultório Todo.",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Julio Lima",
+                        Email = "juliolima_henrique@outlook.com",
+                        Url = new Uri("https://github.com/juliolimahen")
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "OSD",
+                        Url = new Uri("https://opensource.org/osd")
+                    },
+                    TermsOfService = new Uri("https://opensource.org/osd")
+                });
+
+                c.AddFluentValidationRulesScoped();
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+                xmlPath = Path.Combine(AppContext.BaseDirectory, "CT.Core.Shared.xml");
+                c.IncludeXmlComments(xmlPath);
             });
         }
 

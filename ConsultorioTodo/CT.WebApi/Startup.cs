@@ -42,7 +42,7 @@ namespace CT.WebApi
 
             services.AddAutoMapperConfiguration();
 
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDataBaseConfiguration(Configuration);
 
             services.AddDependencyInjectionConfiguration();
 

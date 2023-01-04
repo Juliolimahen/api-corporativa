@@ -24,7 +24,7 @@
     "optimize": false,
     "keyFile": "",
     "emitEntryPoint": true,
-    "xmlDoc": false,
+    "xmlDoc": true,
     "debugType": "portable"
   },
   "targets": {
@@ -35,6 +35,7 @@
           "CT.Core.Shared": "1.0.0",
           "CT.Data": "1.0.0",
           "FluentValidation.AspNetCore": "11.2.2",
+          "MicroElements.Swashbuckle.FluentValidation": "5.7.0",
           "Microsoft.EntityFrameworkCore": "3.1.8",
           "Microsoft.EntityFrameworkCore.Design": "3.1.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
@@ -388,6 +389,21 @@
         },
         "compile": {
           "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+        }
+      },
+      "MicroElements.Swashbuckle.FluentValidation/5.7.0": {
+        "dependencies": {
+          "FluentValidation": "11.2.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MicroElements.Swashbuckle.FluentValidation.dll": {
+            "assemblyVersion": "5.7.0.0",
+            "fileVersion": "5.7.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MicroElements.Swashbuckle.FluentValidation.dll": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -3595,6 +3611,13 @@
       "sha512": "sha512-WqR2kt0OidUCg9xS+YOoiDmdCu7EnYLLgQb/bX+5fTTVor+90dWmr1OdJaWlLZvg2nbwV9EfxA9FZp91+JmQtg==",
       "path": "fluentvalidation.dependencyinjectionextensions/11.2.1",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512"
+    },
+    "MicroElements.Swashbuckle.FluentValidation/5.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cRp+pFKMjxyw1SfqbRuB1ufr6yUWq5RBmIu0Ff4Kf/DbUZpCAmilXNStjrARQXrJqJCFs55Z+eMhtOFADxvpEw==",
+      "path": "microelements.swashbuckle.fluentvalidation/5.7.0",
+      "hashPath": "microelements.swashbuckle.fluentvalidation.5.7.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",

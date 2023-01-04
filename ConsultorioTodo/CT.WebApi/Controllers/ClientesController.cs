@@ -2,6 +2,7 @@
 using CT.Core.Shared.ModelsViews;
 using CT.Manager.Interfaces;
 using CT.Manager.Validator;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -22,30 +23,51 @@ namespace CT.WebApi.Controllers
             _clienteManager = clienteManager;
         }
 
-        // GET: api/<ClientesController>
+        /// <summary>
+        /// Retorna todos clientes cadastrados na base.
+        /// </summary>
         [HttpGet]
+        [ProducesResponseType(typeof(Cliente), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get()
         {
             return Ok(await _clienteManager.GetClientesAsync());
         }
 
-        // GET api/<ClientesController>/5
+        /// <summary>
+        /// Retorna um cliente consultado pelo Id. 
+        /// </summary>
+        /// <param name="id" example="1"> Id do cliente.</param>
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(Cliente), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Cliente), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get(int id)
         {
             return Ok(await _clienteManager.GetClienteByIdAsync(id));
         }
 
-        // POST api/<ClientesController>
+        /// <summary>
+        /// Insere um novo cliente.
+        /// </summary>
+        /// <param name="novoCliente" ></param>
         [HttpPost]
+        [ProducesResponseType(typeof(Cliente), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Post([FromBody] NovoCliente novoCliente)
         {
             var clienteInserido = await _clienteManager.InsertClienteAsync(novoCliente);
             return CreatedAtAction(nameof(Get), new { id = clienteInserido.Id }, clienteInserido);
         }
 
-        // PUT api/<ClientesController>/5
+        /// <summary>
+        /// Altera um cliente.
+        /// </summary>
+        /// <param name="alteraCliente"></param>
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(Cliente), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Cliente), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Put([FromBody] AlteraCliente alteraCliente)
         {
             var clienteAtulizado = await _clienteManager.UpdateClienteByIdAsync(alteraCliente);
@@ -56,8 +78,15 @@ namespace CT.WebApi.Controllers
             return Ok(clienteAtulizado);
         }
 
-        // DELETE api/<ClientesController>/5
+        /// <summary>
+        /// Deleta um cliente.
+        /// </summary>
+        /// <param name="id" example="123"></param>
+        /// <remarks> Ao excluir um cliente, ele será excluido de forma permanente da base.</remarks>
         [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(Cliente), StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(Cliente), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
             await _clienteManager.DeleteClienteByIdAsync(id);

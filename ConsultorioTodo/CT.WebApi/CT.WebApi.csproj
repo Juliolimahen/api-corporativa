@@ -4,12 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>d958c456-aaa4-42e3-b002-e814f95fef58</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="autoMapper" Version="12.0.0" />
     <PackageReference Include="automapper.extensions.microsoft.dependencyinjection" Version="12.0.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="MicroElements.Swashbuckle.Fluentvalidation" Version="5.7.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
       <PrivateAssets>all</PrivateAssets>
