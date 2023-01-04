@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "JMppuM38IDSYMwDh9jIHYg7tnOQr+vqfpfjrq7ToXENk2VjUJXpmlzco/CAbwt0sxqmJqK6KTz3dZNMZyHfncw==",
+  "dgSpecHash": "JTzZnc491sHVm+wB1FA+CfEht0iQ20+eWEP6RndT6hwFYVRLwryXfr+in7q58jrDrU8dMapzExsltd9qufglLw==",
   "success": true,
   "projectFilePath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Data\\CT.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\julio\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\julio\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\julio\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\julio\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\julio\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\julio\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\julio\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

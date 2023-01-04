@@ -1,7 +1,11 @@
 ﻿using CT.Core.Domain;
+using CT.Core.Shared.ModelsViews;
+using CT.Manager.Interfaces;
+using CT.Manager.Validator;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,50 +15,53 @@ namespace CT.WebApi.Controllers
     [ApiController]
     public class ClientesController : ControllerBase
     {
+        private readonly IClienteManager _clienteManager;
+
+        public ClientesController(IClienteManager clienteManager)
+        {
+            _clienteManager = clienteManager;
+        }
+
         // GET: api/<ClientesController>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(new List<Cliente>()
-                {
-                new Cliente
-                {
-                    Id = 1,
-                    Nome="Irineu",
-                    DataNascimento=new DateTime(1990,06,10),
-                },
-                 new Cliente
-                {
-                    Id = 2,
-                    Nome="Bea",
-                    DataNascimento=new DateTime(1999,06,20),
-                }
-            });
+            return Ok(await _clienteManager.GetClientesAsync());
         }
 
         // GET api/<ClientesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            return Ok(await _clienteManager.GetClienteByIdAsync(id));
         }
 
         // POST api/<ClientesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post([FromBody] NovoCliente novoCliente)
         {
+            var clienteInserido = await _clienteManager.InsertClienteAsync(novoCliente);
+            return CreatedAtAction(nameof(Get), new { id = clienteInserido.Id }, clienteInserido);
         }
 
         // PUT api/<ClientesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Put([FromBody] AlteraCliente alteraCliente)
         {
+            var clienteAtulizado = await _clienteManager.UpdateClienteByIdAsync(alteraCliente);
+            if (clienteAtulizado == null)
+            {
+                return NotFound();
+            }
+            return Ok(clienteAtulizado);
         }
 
         // DELETE api/<ClientesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            await _clienteManager.DeleteClienteByIdAsync(id);
+            return NoContent();
         }
     }
 }

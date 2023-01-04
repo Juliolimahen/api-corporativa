@@ -10,5 +10,8 @@ namespace CT.Manager.Interfaces
     {
         Task<Cliente> GetClienteByIdAsync(int id);
         Task<IEnumerable<Cliente>> GetClientesAsync();
+        Task<Cliente> InsertClienteAsync(Cliente cliente);
+        Task<Cliente> UpdateClienteByIdAsync(Cliente cliente);
+        Task DeleteClienteByIdAsync(int id);
     }
 }

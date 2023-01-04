@@ -16,3 +16,5 @@ C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.Data\bin\Debug\netcoreapp3.1\C
 C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.Data\obj\Debug\netcoreapp3.1\CT.Data.genruntimeconfig.cache
 C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.Data\bin\Debug\netcoreapp3.1\CT.Manager.dll
 C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.Data\bin\Debug\netcoreapp3.1\CT.Manager.pdb
+C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.Data\bin\Debug\netcoreapp3.1\CT.Core.Shared.dll
+C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.Data\bin\Debug\netcoreapp3.1\CT.Core.Shared.pdb

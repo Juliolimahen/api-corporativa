@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CT.Core.Shared/1.0.0": {
+        "runtime": {
+          "CT.Core.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CT.Core.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

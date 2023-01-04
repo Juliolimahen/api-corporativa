@@ -4,6 +4,64 @@
     "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.WebApi\\CT.WebApi.csproj": {}
   },
   "projects": {
+    "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core.Shared\\CT.Core.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core.Shared\\CT.Core.Shared.csproj",
+        "projectName": "CT.Core.Shared",
+        "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core.Shared\\CT.Core.Shared.csproj",
+        "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
+        "outputPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -177,6 +235,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core.Shared\\CT.Core.Shared.csproj": {
+                "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core.Shared\\CT.Core.Shared.csproj"
+              },
               "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj": {
                 "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj"
               }
@@ -192,6 +253,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "autoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -239,6 +310,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core.Shared\\CT.Core.Shared.csproj": {
+                "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core.Shared\\CT.Core.Shared.csproj"
+              },
               "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj": {
                 "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj"
               },
@@ -258,6 +332,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.8, )"
@@ -289,6 +367,14 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "autoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "automapper.extensions.microsoft.dependencyinjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
             }
           },
           "imports": [
