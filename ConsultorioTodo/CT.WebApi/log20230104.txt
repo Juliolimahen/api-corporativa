@@ -1,0 +1,601 @@
+2023-01-04 16:24:23.214 -03:00 [INF] Iniciando o WebApi
+2023-01-04 16:25:12.473 -03:00 [INF] Iniciando o WebApi
+2023-01-04 16:25:14.241 -03:00 [INF] Entity Framework Core 3.1.8 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-01-04 16:25:16.498 -03:00 [INF] Executed DbCommand (104ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 16:25:16.751 -03:00 [INF] Executed DbCommand (144ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 16:25:16.777 -03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 16:25:16.780 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 16:25:17.022 -03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-01-04 16:25:17.182 -03:00 [INF] No migrations were applied. The database is already up to date.
+2023-01-04 16:25:17.197 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 16:25:17.353 -03:00 [INF] Executed DbCommand (151ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-01-04 16:25:17.901 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-04 16:25:17.901 -03:00 [INF] Hosting environment: Development
+2023-01-04 16:25:17.901 -03:00 [INF] Content root path: C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.WebApi
+2023-01-04 16:25:18.021 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/index.html  
+2023-01-04 16:25:18.183 -03:00 [WRN] FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 16:25:18.213 -03:00 [WRN] FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 16:25:19.674 -03:00 [INF] Request finished in 1675.3728ms 200 text/html;charset=utf-8
+2023-01-04 16:25:19.806 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/_framework/aspnetcore-browser-refresh.js  
+2023-01-04 16:25:19.821 -03:00 [INF] Request finished in 15.0227ms 200 application/javascript; charset=utf-8
+2023-01-04 16:35:15.989 -03:00 [INF] Iniciando o WebApi
+2023-01-04 16:35:18.350 -03:00 [INF] Entity Framework Core 3.1.8 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-01-04 16:35:21.724 -03:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 16:35:21.869 -03:00 [INF] Executed DbCommand (112ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 16:35:21.877 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 16:35:21.882 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 16:35:21.957 -03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-01-04 16:35:22.004 -03:00 [INF] No migrations were applied. The database is already up to date.
+2023-01-04 16:35:22.008 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 16:35:22.433 -03:00 [INF] Executed DbCommand (422ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-01-04 16:35:22.683 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-04 16:35:22.684 -03:00 [INF] Hosting environment: Development
+2023-01-04 16:35:22.684 -03:00 [INF] Content root path: C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.WebApi
+2023-01-04 16:35:22.752 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/index.html  
+2023-01-04 16:35:23.068 -03:00 [WRN] FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 16:35:23.093 -03:00 [WRN] FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 16:35:24.573 -03:00 [INF] Request finished in 1830.8874ms 200 text/html;charset=utf-8
+2023-01-04 16:35:25.524 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/_framework/aspnetcore-browser-refresh.js  
+2023-01-04 16:35:25.532 -03:00 [INF] Request finished in 10.4171ms 200 application/javascript; charset=utf-8
+2023-01-04 16:35:26.525 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/swagger/v1/swagger.json  
+2023-01-04 16:35:27.555 -03:00 [INF] Request finished in 1030.3623ms 200 application/json;charset=utf-8
+2023-01-04 16:37:42.381 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44325/api/Clientes application/json 134
+2023-01-04 16:37:42.486 -03:00 [INF] Executing endpoint 'CT.WebApi.Controllers.ClientesController.Post (CT.WebApi)'
+2023-01-04 16:37:42.593 -03:00 [INF] Route matched with {action = "Post", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(CT.Core.Shared.ModelsViews.NovoCliente) on controller CT.WebApi.Controllers.ClientesController (CT.WebApi).
+2023-01-04 16:37:43.101 -03:00 [INF] Foi requisitada a inserção de um novo cliente.
+2023-01-04 16:37:43.147 -03:00 [INF] Entity Framework Core 3.1.8 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-01-04 16:37:44.176 -03:00 [INF] Executed DbCommand (511ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 1), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Clientes] ([Criacao], [DataNascimento], [Documento], [Nome], [Sexo], [Telefone], [UltimaAtualizacao])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [Clientes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-01-04 16:37:44.306 -03:00 [INF] Executing ObjectResult, writing value of type 'CT.Core.Domain.Cliente'.
+2023-01-04 16:37:44.403 -03:00 [INF] Executed action CT.WebApi.Controllers.ClientesController.Post (CT.WebApi) in 1794.7511ms
+2023-01-04 16:37:44.408 -03:00 [INF] Executed endpoint 'CT.WebApi.Controllers.ClientesController.Post (CT.WebApi)'
+2023-01-04 16:37:44.412 -03:00 [INF] Request finished in 2034.4951ms 201 application/json; charset=utf-8
+2023-01-04 16:44:25.105 -03:00 [INF] Iniciando o WebApi
+2023-01-04 16:44:27.859 -03:00 [INF] Entity Framework Core 3.1.8 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-01-04 16:44:29.041 -03:00 [INF] Executed DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 16:44:29.218 -03:00 [INF] Executed DbCommand (136ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 16:44:29.241 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 16:44:29.250 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 16:44:29.363 -03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-01-04 16:44:29.436 -03:00 [INF] No migrations were applied. The database is already up to date.
+2023-01-04 16:44:29.442 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 16:44:30.093 -03:00 [INF] Executed DbCommand (647ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-01-04 16:44:30.670 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-04 16:44:30.671 -03:00 [INF] Hosting environment: Development
+2023-01-04 16:44:30.671 -03:00 [INF] Content root path: C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.WebApi
+2023-01-04 16:44:30.790 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/index.html  
+2023-01-04 16:44:31.026 -03:00 [WRN] FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 16:44:31.070 -03:00 [WRN] FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 16:44:32.961 -03:00 [INF] Request finished in 2191.3181ms 200 text/html;charset=utf-8
+2023-01-04 16:44:33.139 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/_framework/aspnetcore-browser-refresh.js  
+2023-01-04 16:44:33.162 -03:00 [INF] Request finished in 22.67ms 200 application/javascript; charset=utf-8
+2023-01-04 16:44:35.872 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/swagger/v1/swagger.json  
+2023-01-04 16:44:36.441 -03:00 [INF] Request finished in 566.5276ms 200 application/json;charset=utf-8
+2023-01-04 18:46:25.258 -03:00 [INF] Iniciando o WebApi
+2023-01-04 18:46:26.235 -03:00 [DBG] Hosting starting
+2023-01-04 18:46:26.722 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-01-04 18:46:28.340 -03:00 [INF] Entity Framework Core 3.1.8 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-01-04 18:46:28.467 -03:00 [DBG] Migrating using database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:28.503 -03:00 [DBG] Opening connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.346 -03:00 [DBG] Opened connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.366 -03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-01-04 18:46:30.384 -03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (15ms).
+2023-01-04 18:46:30.406 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 18:46:30.471 -03:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 18:46:30.476 -03:00 [DBG] Closing connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.487 -03:00 [DBG] Closed connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.492 -03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-01-04 18:46:30.492 -03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-01-04 18:46:30.493 -03:00 [DBG] Opening connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.496 -03:00 [DBG] Opened connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.497 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 18:46:30.547 -03:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 18:46:30.547 -03:00 [DBG] Closing connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.550 -03:00 [DBG] Closed connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.553 -03:00 [DBG] Opening connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.553 -03:00 [DBG] Opened connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.553 -03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-01-04 18:46:30.553 -03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-01-04 18:46:30.554 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 18:46:30.558 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 18:46:30.558 -03:00 [DBG] Closing connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.558 -03:00 [DBG] Closed connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.558 -03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-01-04 18:46:30.558 -03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-01-04 18:46:30.558 -03:00 [DBG] Opening connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.558 -03:00 [DBG] Opened connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.558 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 18:46:30.560 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-01-04 18:46:30.560 -03:00 [DBG] Closing connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.560 -03:00 [DBG] Closed connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.611 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-01-04 18:46:30.611 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-01-04 18:46:30.611 -03:00 [DBG] Opening connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.611 -03:00 [DBG] Opened connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.612 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-01-04 18:46:30.624 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-01-04 18:46:30.629 -03:00 [DBG] A data reader was disposed.
+2023-01-04 18:46:30.630 -03:00 [DBG] Closing connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.630 -03:00 [DBG] Closed connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.666 -03:00 [INF] No migrations were applied. The database is already up to date.
+2023-01-04 18:46:30.669 -03:00 [DBG] Opening connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.669 -03:00 [DBG] Opened connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.669 -03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-01-04 18:46:30.669 -03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-01-04 18:46:30.669 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 18:46:30.671 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-04 18:46:30.672 -03:00 [DBG] Closing connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.672 -03:00 [DBG] Closed connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.675 -03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-01-04 18:46:30.675 -03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-01-04 18:46:30.675 -03:00 [DBG] Opening connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.675 -03:00 [DBG] Opened connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.675 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-01-04 18:46:30.756 -03:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-01-04 18:46:30.756 -03:00 [DBG] Closing connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.756 -03:00 [DBG] Closed connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:30.759 -03:00 [DBG] 'AppDbContext' disposed.
+2023-01-04 18:46:31.001 -03:00 [DBG] Loaded hosting startup assembly CT.WebApi
+2023-01-04 18:46:31.001 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-01-04 18:46:31.001 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-01-04 18:46:31.004 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-04 18:46:31.004 -03:00 [INF] Hosting environment: Development
+2023-01-04 18:46:31.004 -03:00 [INF] Content root path: C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.WebApi
+2023-01-04 18:46:31.004 -03:00 [DBG] Hosting started
+2023-01-04 18:46:31.115 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/index.html  
+2023-01-04 18:46:31.207 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-01-04 18:46:31.257 -03:00 [WRN] FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 18:46:31.276 -03:00 [WRN] FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 18:46:31.277 -03:00 [DBG] FluentValidationRules Created
+2023-01-04 18:46:31.375 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-01-04 18:46:32.665 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-01-04 18:46:32.676 -03:00 [INF] Request finished in 1590.1892ms 200 text/html;charset=utf-8
+2023-01-04 18:46:32.747 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/_framework/aspnetcore-browser-refresh.js  
+2023-01-04 18:46:32.757 -03:00 [INF] Request finished in 9.5059ms 200 application/javascript; charset=utf-8
+2023-01-04 18:46:33.877 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/swagger/v1/swagger.json  
+2023-01-04 18:46:34.332 -03:00 [DBG] Applying FluentValidation rules to swagger schema 'NovoCliente'.
+2023-01-04 18:46:34.334 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.nome'.
+2023-01-04 18:46:34.341 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.nome'.
+2023-01-04 18:46:34.344 -03:00 [DBG] Rule 'NotEmpty' applied for property 'NovoCliente.nome'.
+2023-01-04 18:46:34.346 -03:00 [DBG] Rule 'Length' applied for property 'NovoCliente.nome'.
+2023-01-04 18:46:34.347 -03:00 [DBG] Rule 'Length' applied for property 'NovoCliente.nome'.
+2023-01-04 18:46:34.348 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.dataNascimento'.
+2023-01-04 18:46:34.348 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.dataNascimento'.
+2023-01-04 18:46:34.349 -03:00 [DBG] Rule 'NotEmpty' applied for property 'NovoCliente.dataNascimento'.
+2023-01-04 18:46:34.351 -03:00 [DBG] Rule 'Comparison' applied for property 'NovoCliente.dataNascimento'.
+2023-01-04 18:46:34.351 -03:00 [DBG] Rule 'Comparison' applied for property 'NovoCliente.dataNascimento'.
+2023-01-04 18:46:34.355 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.sexo'.
+2023-01-04 18:46:34.355 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.sexo'.
+2023-01-04 18:46:34.356 -03:00 [DBG] Rule 'NotEmpty' applied for property 'NovoCliente.sexo'.
+2023-01-04 18:46:34.356 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.telefone'.
+2023-01-04 18:46:34.356 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.telefone'.
+2023-01-04 18:46:34.357 -03:00 [DBG] Rule 'NotEmpty' applied for property 'NovoCliente.telefone'.
+2023-01-04 18:46:34.361 -03:00 [DBG] Rule 'Pattern' applied for property 'NovoCliente.telefone'.
+2023-01-04 18:46:34.361 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.documento'.
+2023-01-04 18:46:34.361 -03:00 [DBG] Rule 'Required' applied for property 'NovoCliente.documento'.
+2023-01-04 18:46:34.362 -03:00 [DBG] Rule 'NotEmpty' applied for property 'NovoCliente.documento'.
+2023-01-04 18:46:34.362 -03:00 [DBG] Rule 'Length' applied for property 'NovoCliente.documento'.
+2023-01-04 18:46:34.363 -03:00 [DBG] Rule 'Length' applied for property 'NovoCliente.documento'.
+2023-01-04 18:46:34.425 -03:00 [DBG] Applying FluentValidation rules to swagger schema 'AlteraCliente'.
+2023-01-04 18:46:34.425 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.id'.
+2023-01-04 18:46:34.425 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.id'.
+2023-01-04 18:46:34.425 -03:00 [DBG] Rule 'NotEmpty' applied for property 'AlteraCliente.id'.
+2023-01-04 18:46:34.428 -03:00 [DBG] Rule 'Comparison' applied for property 'AlteraCliente.id'.
+2023-01-04 18:46:34.434 -03:00 [DBG] Applying FluentValidation rules to swagger schema 'AlteraCliente'.
+2023-01-04 18:46:34.434 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.nome'.
+2023-01-04 18:46:34.434 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.nome'.
+2023-01-04 18:46:34.434 -03:00 [DBG] Rule 'NotEmpty' applied for property 'AlteraCliente.nome'.
+2023-01-04 18:46:34.435 -03:00 [DBG] Rule 'Length' applied for property 'AlteraCliente.nome'.
+2023-01-04 18:46:34.435 -03:00 [DBG] Rule 'Length' applied for property 'AlteraCliente.nome'.
+2023-01-04 18:46:34.435 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.dataNascimento'.
+2023-01-04 18:46:34.435 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.dataNascimento'.
+2023-01-04 18:46:34.435 -03:00 [DBG] Rule 'NotEmpty' applied for property 'AlteraCliente.dataNascimento'.
+2023-01-04 18:46:34.436 -03:00 [DBG] Rule 'Comparison' applied for property 'AlteraCliente.dataNascimento'.
+2023-01-04 18:46:34.436 -03:00 [DBG] Rule 'Comparison' applied for property 'AlteraCliente.dataNascimento'.
+2023-01-04 18:46:34.436 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.sexo'.
+2023-01-04 18:46:34.436 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.sexo'.
+2023-01-04 18:46:34.436 -03:00 [DBG] Rule 'NotEmpty' applied for property 'AlteraCliente.sexo'.
+2023-01-04 18:46:34.436 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.telefone'.
+2023-01-04 18:46:34.436 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.telefone'.
+2023-01-04 18:46:34.437 -03:00 [DBG] Rule 'NotEmpty' applied for property 'AlteraCliente.telefone'.
+2023-01-04 18:46:34.437 -03:00 [DBG] Rule 'Pattern' applied for property 'AlteraCliente.telefone'.
+2023-01-04 18:46:34.437 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.documento'.
+2023-01-04 18:46:34.437 -03:00 [DBG] Rule 'Required' applied for property 'AlteraCliente.documento'.
+2023-01-04 18:46:34.437 -03:00 [DBG] Rule 'NotEmpty' applied for property 'AlteraCliente.documento'.
+2023-01-04 18:46:34.438 -03:00 [DBG] Rule 'Length' applied for property 'AlteraCliente.documento'.
+2023-01-04 18:46:34.438 -03:00 [DBG] Rule 'Length' applied for property 'AlteraCliente.documento'.
+2023-01-04 18:46:34.651 -03:00 [INF] Request finished in 775.187ms 200 application/json;charset=utf-8
+2023-01-04 18:46:41.418 -03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44325/api/Clientes  
+2023-01-04 18:46:41.426 -03:00 [DBG] The request path /api/Clientes does not match a supported file type
+2023-01-04 18:46:41.506 -03:00 [DBG] 1 candidate(s) found for the request path '/api/Clientes'
+2023-01-04 18:46:41.515 -03:00 [DBG] Endpoint 'CT.WebApi.Controllers.ClientesController.Get (CT.WebApi)' with route pattern 'api/Clientes' is valid for the request path '/api/Clientes'
+2023-01-04 18:46:41.516 -03:00 [DBG] Request matched endpoint 'CT.WebApi.Controllers.ClientesController.Get (CT.WebApi)'
+2023-01-04 18:46:41.522 -03:00 [INF] Executing endpoint 'CT.WebApi.Controllers.ClientesController.Get (CT.WebApi)'
+2023-01-04 18:46:41.540 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2023-01-04 18:46:41.606 -03:00 [INF] Route matched with {action = "Get", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller CT.WebApi.Controllers.ClientesController (CT.WebApi).
+2023-01-04 18:46:41.607 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-01-04 18:46:41.607 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-01-04 18:46:41.608 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-01-04 18:46:41.608 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-01-04 18:46:41.608 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-01-04 18:46:41.609 -03:00 [DBG] Executing controller factory for controller CT.WebApi.Controllers.ClientesController (CT.WebApi)
+2023-01-04 18:46:41.876 -03:00 [DBG] Executed controller factory for controller CT.WebApi.Controllers.ClientesController (CT.WebApi)
+2023-01-04 18:46:41.891 -03:00 [INF] Entity Framework Core 3.1.8 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-01-04 18:46:42.238 -03:00 [DBG] queryContext => new QueryingEnumerable<Cliente>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, Cliente>, 
+    CT.Data.Context.AppDbContext, 
+    null
+)
+2023-01-04 18:46:42.303 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-01-04 18:46:42.304 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-01-04 18:46:42.312 -03:00 [DBG] Opening connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:42.316 -03:00 [DBG] Opened connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:42.317 -03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Criacao], [c].[DataNascimento], [c].[Documento], [c].[Nome], [c].[Sexo], [c].[Telefone], [c].[UltimaAtualizacao]
+FROM [Clientes] AS [c]
+2023-01-04 18:46:42.353 -03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Criacao], [c].[DataNascimento], [c].[Documento], [c].[Nome], [c].[Sexo], [c].[Telefone], [c].[UltimaAtualizacao]
+FROM [Clientes] AS [c]
+2023-01-04 18:46:42.384 -03:00 [DBG] A data reader was disposed.
+2023-01-04 18:46:42.392 -03:00 [DBG] Closing connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:42.396 -03:00 [DBG] Closed connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:46:42.409 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-01-04 18:46:42.413 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-01-04 18:46:42.415 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-01-04 18:46:42.415 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-01-04 18:46:42.416 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-01-04 18:46:42.416 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-01-04 18:46:42.417 -03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CT.Core.Domain.Cliente, CT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-01-04 18:46:42.456 -03:00 [INF] Executed action CT.WebApi.Controllers.ClientesController.Get (CT.WebApi) in 835.0034ms
+2023-01-04 18:46:42.457 -03:00 [INF] Executed endpoint 'CT.WebApi.Controllers.ClientesController.Get (CT.WebApi)'
+2023-01-04 18:46:42.459 -03:00 [DBG] 'AppDbContext' disposed.
+2023-01-04 18:46:42.461 -03:00 [INF] Request finished in 1043.2323ms 200 application/json; charset=utf-8
+2023-01-04 18:47:09.614 -03:00 [INF] Request starting HTTP/2.0 POST https://localhost:44325/api/Clientes application/json 134
+2023-01-04 18:47:09.615 -03:00 [DBG] POST requests are not supported
+2023-01-04 18:47:09.615 -03:00 [DBG] 1 candidate(s) found for the request path '/api/Clientes'
+2023-01-04 18:47:09.616 -03:00 [DBG] Endpoint 'CT.WebApi.Controllers.ClientesController.Post (CT.WebApi)' with route pattern 'api/Clientes' is valid for the request path '/api/Clientes'
+2023-01-04 18:47:09.616 -03:00 [DBG] Request matched endpoint 'CT.WebApi.Controllers.ClientesController.Post (CT.WebApi)'
+2023-01-04 18:47:09.616 -03:00 [INF] Executing endpoint 'CT.WebApi.Controllers.ClientesController.Post (CT.WebApi)'
+2023-01-04 18:47:09.654 -03:00 [INF] Route matched with {action = "Post", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(CT.Core.Shared.ModelsViews.NovoCliente) on controller CT.WebApi.Controllers.ClientesController (CT.WebApi).
+2023-01-04 18:47:09.654 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-01-04 18:47:09.654 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-01-04 18:47:09.654 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-01-04 18:47:09.655 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-01-04 18:47:09.655 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-01-04 18:47:09.655 -03:00 [DBG] Executing controller factory for controller CT.WebApi.Controllers.ClientesController (CT.WebApi)
+2023-01-04 18:47:09.661 -03:00 [DBG] Executed controller factory for controller CT.WebApi.Controllers.ClientesController (CT.WebApi)
+2023-01-04 18:47:09.674 -03:00 [DBG] Attempting to bind parameter 'novoCliente' of type 'CT.Core.Shared.ModelsViews.NovoCliente' ...
+2023-01-04 18:47:09.678 -03:00 [DBG] Attempting to bind parameter 'novoCliente' of type 'CT.Core.Shared.ModelsViews.NovoCliente' using the name '' in request data ...
+2023-01-04 18:47:09.679 -03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2023-01-04 18:47:09.695 -03:00 [DBG] JSON input formatter succeeded, deserializing to type 'CT.Core.Shared.ModelsViews.NovoCliente'
+2023-01-04 18:47:09.696 -03:00 [DBG] Done attempting to bind parameter 'novoCliente' of type 'CT.Core.Shared.ModelsViews.NovoCliente'.
+2023-01-04 18:47:09.696 -03:00 [DBG] Done attempting to bind parameter 'novoCliente' of type 'CT.Core.Shared.ModelsViews.NovoCliente'.
+2023-01-04 18:47:09.696 -03:00 [DBG] Attempting to validate the bound parameter 'novoCliente' of type 'CT.Core.Shared.ModelsViews.NovoCliente' ...
+2023-01-04 18:47:09.809 -03:00 [DBG] Done attempting to validate the bound parameter 'novoCliente' of type 'CT.Core.Shared.ModelsViews.NovoCliente'.
+2023-01-04 18:47:09.812 -03:00 [INF] Foi requisitada a inserção de um novo cliente.
+2023-01-04 18:47:09.888 -03:00 [INF] Entity Framework Core 3.1.8 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-01-04 18:47:09.950 -03:00 [DBG] 'AppDbContext' generated a temporary value for the 'Id' property of new 'Cliente' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-01-04 18:47:10.028 -03:00 [DBG] Context 'AppDbContext' started tracking 'Cliente' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-01-04 18:47:10.031 -03:00 [DBG] SaveChanges starting for 'AppDbContext'.
+2023-01-04 18:47:10.034 -03:00 [DBG] DetectChanges starting for 'AppDbContext'.
+2023-01-04 18:47:10.056 -03:00 [DBG] DetectChanges completed for 'AppDbContext'.
+2023-01-04 18:47:10.079 -03:00 [DBG] Opening connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:47:10.080 -03:00 [DBG] Opened connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:47:10.083 -03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-01-04 18:47:10.100 -03:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2023-01-04 18:47:10.177 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-01-04 18:47:10.177 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-01-04 18:47:10.198 -03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 1), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Clientes] ([Criacao], [DataNascimento], [Documento], [Nome], [Sexo], [Telefone], [UltimaAtualizacao])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [Clientes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-01-04 18:47:10.313 -03:00 [INF] Executed DbCommand (126ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 1), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Clientes] ([Criacao], [DataNascimento], [Documento], [Nome], [Sexo], [Telefone], [UltimaAtualizacao])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [Clientes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-01-04 18:47:10.344 -03:00 [DBG] Foreign key property 'Cliente.Id' detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2023-01-04 18:47:10.354 -03:00 [DBG] A data reader was disposed.
+2023-01-04 18:47:10.357 -03:00 [DBG] Committing transaction.
+2023-01-04 18:47:10.362 -03:00 [DBG] Committing transaction.
+2023-01-04 18:47:10.362 -03:00 [DBG] Closing connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:47:10.363 -03:00 [DBG] Closed connection to database 'ConsultorioTodo' on server 'DEVPC\SQLEXPRESS'.
+2023-01-04 18:47:10.367 -03:00 [DBG] Disposing transaction.
+2023-01-04 18:47:10.388 -03:00 [DBG] An 'Cliente' entity tracked by 'AppDbContext' changed from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-01-04 18:47:10.391 -03:00 [DBG] SaveChanges completed for 'AppDbContext' with 1 entities written to the database.
+2023-01-04 18:47:10.395 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-01-04 18:47:10.395 -03:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-01-04 18:47:10.395 -03:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-01-04 18:47:10.396 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-01-04 18:47:10.396 -03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-01-04 18:47:10.396 -03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-01-04 18:47:10.396 -03:00 [INF] Executing ObjectResult, writing value of type 'CT.Core.Domain.Cliente'.
+2023-01-04 18:47:10.434 -03:00 [DBG] Found the endpoints ["CT.WebApi.Controllers.ClientesController.Get (CT.WebApi)","CT.WebApi.Controllers.ClientesController.Get (CT.WebApi)"] for address Microsoft.AspNetCore.Routing.RouteValuesAddress
+2023-01-04 18:47:10.443 -03:00 [DBG] Successfully processed template api/Clientes/{id} for CT.WebApi.Controllers.ClientesController.Get (CT.WebApi) resulting in /api/Clientes/7 and 
+2023-01-04 18:47:10.444 -03:00 [DBG] Link generation succeeded for endpoints ["CT.WebApi.Controllers.ClientesController.Get (CT.WebApi)","CT.WebApi.Controllers.ClientesController.Get (CT.WebApi)"] with result /api/Clientes/7
+2023-01-04 18:47:10.446 -03:00 [INF] Executed action CT.WebApi.Controllers.ClientesController.Post (CT.WebApi) in 791.4438ms
+2023-01-04 18:47:10.446 -03:00 [INF] Executed endpoint 'CT.WebApi.Controllers.ClientesController.Post (CT.WebApi)'
+2023-01-04 18:47:10.447 -03:00 [DBG] 'AppDbContext' disposed.
+2023-01-04 18:47:10.447 -03:00 [INF] Request finished in 836.3469ms 201 application/json; charset=utf-8
+2023-01-04 18:54:23.297 -03:00 [WRN] FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 18:54:23.333 -03:00 [WRN] FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 18:59:31.048 -03:00 [WRN] FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 18:59:31.089 -03:00 [WRN] FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 19:02:40.293 -03:00 [WRN] FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 19:02:40.348 -03:00 [WRN] FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 19:10:09.704 -03:00 [WRN] FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+2023-01-04 19:10:09.745 -03:00 [WRN] FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'
+{"@t":"2023-01-04T23:16:22.9109195Z","@mt":"FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"8000002a-0000-f900-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|504525e0-4bfd0e330f3ca508.","TraceId":"504525e0-4bfd0e330f3ca508","ParentId":""}
+{"@t":"2023-01-04T23:16:22.9434256Z","@mt":"FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"8000002a-0000-f900-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|504525e0-4bfd0e330f3ca508.","TraceId":"504525e0-4bfd0e330f3ca508","ParentId":""}
+{"@t":"2023-01-04T23:21:13.4932598Z","@mt":"FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"8000005d-0002-fd00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|59ab6b5a-42516dfcc9ec619e.","TraceId":"59ab6b5a-42516dfcc9ec619e","ParentId":""}
+{"@t":"2023-01-04T23:21:13.5379892Z","@mt":"FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"8000005d-0002-fd00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|59ab6b5a-42516dfcc9ec619e.","TraceId":"59ab6b5a-42516dfcc9ec619e","ParentId":""}
+{"@t":"2023-01-04T23:24:58.4076606Z","@mt":"FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"8000005e-0003-fe00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|2d68d74f-41c7e512b910b167.","TraceId":"2d68d74f-41c7e512b910b167","ParentId":""}
+{"@t":"2023-01-04T23:24:58.4322538Z","@mt":"FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"8000005e-0003-fe00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|2d68d74f-41c7e512b910b167.","TraceId":"2d68d74f-41c7e512b910b167","ParentId":""}
+{"@t":"2023-01-04T23:30:04.0315475Z","@mt":"FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"8000004a-0001-fc00-b63f-84710c7967bb","RequestPath":"/","SpanId":"|876e0550-428c9973511861e0.","TraceId":"876e0550-428c9973511861e0","ParentId":""}
+{"@t":"2023-01-04T23:30:04.4062613Z","@mt":"FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"8000004a-0001-fc00-b63f-84710c7967bb","RequestPath":"/","SpanId":"|876e0550-428c9973511861e0.","TraceId":"876e0550-428c9973511861e0","ParentId":""}
+{"@t":"2023-01-04T23:36:36.8087908Z","@mt":"Iniciando o WebApi"}
+{"@t":"2023-01-04T23:36:37.2134319Z","@mt":"Hosting starting","@l":"Debug","EventId":{"Id":1},"SourceContext":"Microsoft.Extensions.Hosting.Internal.Host"}
+{"@t":"2023-01-04T23:36:37.4744932Z","@mt":"An 'IServiceProvider' was created for internal use by Entity Framework.","@l":"Debug","EventId":{"Id":10401,"Name":"Microsoft.EntityFrameworkCore.Infrastructure.ServiceProviderCreated"},"SourceContext":"Microsoft.EntityFrameworkCore.Infrastructure"}
+{"@t":"2023-01-04T23:36:38.4240331Z","@mt":"Entity Framework Core {version} initialized '{contextType}' using provider '{provider}' with options: {options}","version":"3.1.8","contextType":"AppDbContext","provider":"Microsoft.EntityFrameworkCore.SqlServer","options":"None","EventId":{"Id":10403,"Name":"Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized"},"SourceContext":"Microsoft.EntityFrameworkCore.Infrastructure"}
+{"@t":"2023-01-04T23:36:38.4862647Z","@mt":"Migrating using database '{database}' on server '{dataSource}'.","@l":"Debug","database":"ConsultorioTodo","dataSource":"DEVPC\\SQLEXPRESS","EventId":{"Id":20400,"Name":"Microsoft.EntityFrameworkCore.Migrations.MigrateUsingConnection"},"SourceContext":"Microsoft.EntityFrameworkCore.Migrations"}
+{"@t":"2023-01-04T23:36:38.5004590Z","@mt":"Opening connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20000,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpening"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.1074918Z","@mt":"Opened connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20001,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpened"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.1265168Z","@mt":"Creating DbCommand for '{executionType}'.","@l":"Debug","executionType":"ExecuteNonQuery","EventId":{"Id":20103,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreating"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.1442901Z","@mt":"Created DbCommand for '{executionType}' ({elapsed}ms).","@l":"Debug","executionType":"ExecuteNonQuery","elapsed":14,"EventId":{"Id":20104,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreated"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.1645257Z","@mt":"Executing DbCommand [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","@l":"Debug","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT 1","EventId":{"Id":20100,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.2231980Z","@mt":"Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","elapsed":"61","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT 1","EventId":{"Id":20101,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.2301664Z","@mt":"Closing connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20002,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosing"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.2395568Z","@mt":"Closed connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20003,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosed"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.2470775Z","@mt":"Creating DbCommand for '{executionType}'.","@l":"Debug","executionType":"ExecuteScalar","EventId":{"Id":20103,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreating"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.2473228Z","@mt":"Created DbCommand for '{executionType}' ({elapsed}ms).","@l":"Debug","executionType":"ExecuteScalar","elapsed":0,"EventId":{"Id":20104,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreated"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.2474583Z","@mt":"Opening connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20000,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpening"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.2510448Z","@mt":"Opened connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20001,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpened"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.2521467Z","@mt":"Executing DbCommand [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","@l":"Debug","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT OBJECT_ID(N'[__EFMigrationsHistory]');","EventId":{"Id":20100,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.2972870Z","@mt":"Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","elapsed":"46","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT OBJECT_ID(N'[__EFMigrationsHistory]');","EventId":{"Id":20101,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.2973656Z","@mt":"Closing connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20002,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosing"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.2994102Z","@mt":"Closed connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20003,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosed"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3019918Z","@mt":"Opening connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20000,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpening"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3021941Z","@mt":"Opened connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20001,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpened"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3022810Z","@mt":"Creating DbCommand for '{executionType}'.","@l":"Debug","executionType":"ExecuteNonQuery","EventId":{"Id":20103,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreating"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3023154Z","@mt":"Created DbCommand for '{executionType}' ({elapsed}ms).","@l":"Debug","executionType":"ExecuteNonQuery","elapsed":0,"EventId":{"Id":20104,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreated"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3023804Z","@mt":"Executing DbCommand [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","@l":"Debug","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT 1","EventId":{"Id":20100,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3066335Z","@mt":"Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","elapsed":"4","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT 1","EventId":{"Id":20101,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3067216Z","@mt":"Closing connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20002,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosing"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3067644Z","@mt":"Closed connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20003,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosed"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3070233Z","@mt":"Creating DbCommand for '{executionType}'.","@l":"Debug","executionType":"ExecuteScalar","EventId":{"Id":20103,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreating"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3070669Z","@mt":"Created DbCommand for '{executionType}' ({elapsed}ms).","@l":"Debug","executionType":"ExecuteScalar","elapsed":0,"EventId":{"Id":20104,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreated"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3071013Z","@mt":"Opening connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20000,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpening"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3072596Z","@mt":"Opened connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20001,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpened"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3073197Z","@mt":"Executing DbCommand [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","@l":"Debug","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT OBJECT_ID(N'[__EFMigrationsHistory]');","EventId":{"Id":20100,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3083871Z","@mt":"Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","elapsed":"1","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT OBJECT_ID(N'[__EFMigrationsHistory]');","EventId":{"Id":20101,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3084429Z","@mt":"Closing connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20002,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosing"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3084871Z","@mt":"Closed connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20003,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosed"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3510159Z","@mt":"Creating DbCommand for '{executionType}'.","@l":"Debug","executionType":"ExecuteReader","EventId":{"Id":20103,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreating"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3510909Z","@mt":"Created DbCommand for '{executionType}' ({elapsed}ms).","@l":"Debug","executionType":"ExecuteReader","elapsed":0,"EventId":{"Id":20104,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreated"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3511333Z","@mt":"Opening connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20000,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpening"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3513257Z","@mt":"Opened connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20001,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpened"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3524878Z","@mt":"Executing DbCommand [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","@l":"Debug","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT [MigrationId], [ProductVersion]\r\nFROM [__EFMigrationsHistory]\r\nORDER BY [MigrationId];","EventId":{"Id":20100,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3581700Z","@mt":"Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","elapsed":"6","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT [MigrationId], [ProductVersion]\r\nFROM [__EFMigrationsHistory]\r\nORDER BY [MigrationId];","EventId":{"Id":20101,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3642504Z","@mt":"A data reader was disposed.","@l":"Debug","EventId":{"Id":20300,"Name":"Microsoft.EntityFrameworkCore.Database.Command.DataReaderDisposing"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3645254Z","@mt":"Closing connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20002,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosing"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3645860Z","@mt":"Closed connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20003,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosed"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3937062Z","@mt":"No migrations were applied. The database is already up to date.","EventId":{"Id":20405,"Name":"Microsoft.EntityFrameworkCore.Migrations.MigrationsNotApplied"},"SourceContext":"Microsoft.EntityFrameworkCore.Migrations"}
+{"@t":"2023-01-04T23:36:39.3955838Z","@mt":"Opening connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20000,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpening"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3957803Z","@mt":"Opened connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20001,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpened"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3958347Z","@mt":"Creating DbCommand for '{executionType}'.","@l":"Debug","executionType":"ExecuteNonQuery","EventId":{"Id":20103,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreating"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3958707Z","@mt":"Created DbCommand for '{executionType}' ({elapsed}ms).","@l":"Debug","executionType":"ExecuteNonQuery","elapsed":0,"EventId":{"Id":20104,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreated"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3959151Z","@mt":"Executing DbCommand [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","@l":"Debug","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT 1","EventId":{"Id":20100,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3966598Z","@mt":"Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","elapsed":"1","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"SELECT 1","EventId":{"Id":20101,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.3968024Z","@mt":"Closing connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20002,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosing"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.3969194Z","@mt":"Closed connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20003,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosed"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.4001695Z","@mt":"Creating DbCommand for '{executionType}'.","@l":"Debug","executionType":"ExecuteScalar","EventId":{"Id":20103,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreating"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.4002240Z","@mt":"Created DbCommand for '{executionType}' ({elapsed}ms).","@l":"Debug","executionType":"ExecuteScalar","elapsed":0,"EventId":{"Id":20104,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandCreated"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.4002523Z","@mt":"Opening connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20000,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpening"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.4003679Z","@mt":"Opened connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20001,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionOpened"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.4004284Z","@mt":"Executing DbCommand [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","@l":"Debug","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"\r\nIF EXISTS\r\n    (SELECT *\r\n     FROM [sys].[objects] o\r\n     WHERE [o].[type] = 'U'\r\n     AND [o].[is_ms_shipped] = 0\r\n     AND NOT EXISTS (SELECT *\r\n         FROM [sys].[extended_properties] AS [ep]\r\n         WHERE [ep].[major_id] = [o].[object_id]\r\n             AND [ep].[minor_id] = 0\r\n             AND [ep].[class] = 1\r\n             AND [ep].[name] = N'microsoft_database_tools_support'\r\n    )\r\n)\r\nSELECT 1 ELSE SELECT 0","EventId":{"Id":20100,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.4454540Z","@mt":"Executed DbCommand ({elapsed}ms) [Parameters=[{parameters}], CommandType='{commandType}', CommandTimeout='{commandTimeout}']{newLine}{commandText}","elapsed":"45","parameters":"","commandType":"Text","commandTimeout":30,"newLine":"\r\n","commandText":"\r\nIF EXISTS\r\n    (SELECT *\r\n     FROM [sys].[objects] o\r\n     WHERE [o].[type] = 'U'\r\n     AND [o].[is_ms_shipped] = 0\r\n     AND NOT EXISTS (SELECT *\r\n         FROM [sys].[extended_properties] AS [ep]\r\n         WHERE [ep].[major_id] = [o].[object_id]\r\n             AND [ep].[minor_id] = 0\r\n             AND [ep].[class] = 1\r\n             AND [ep].[name] = N'microsoft_database_tools_support'\r\n    )\r\n)\r\nSELECT 1 ELSE SELECT 0","EventId":{"Id":20101,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command"}
+{"@t":"2023-01-04T23:36:39.4455291Z","@mt":"Closing connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20002,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosing"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.4455676Z","@mt":"Closed connection to database '{database}' on server '{server}'.","@l":"Debug","database":"ConsultorioTodo","server":"DEVPC\\SQLEXPRESS","EventId":{"Id":20003,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionClosed"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection"}
+{"@t":"2023-01-04T23:36:39.4481164Z","@mt":"'{contextType}' disposed.","@l":"Debug","contextType":"AppDbContext","EventId":{"Id":10407,"Name":"Microsoft.EntityFrameworkCore.Infrastructure.ContextDisposed"},"SourceContext":"Microsoft.EntityFrameworkCore.Infrastructure"}
+{"@t":"2023-01-04T23:36:39.6116079Z","@mt":"Loaded hosting startup assembly {assemblyName}","@l":"Debug","assemblyName":"CT.WebApi","SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics"}
+{"@t":"2023-01-04T23:36:39.6117010Z","@mt":"Loaded hosting startup assembly {assemblyName}","@l":"Debug","assemblyName":"Microsoft.AspNetCore.Watch.BrowserRefresh","SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics"}
+{"@t":"2023-01-04T23:36:39.6117162Z","@mt":"Loaded hosting startup assembly {assemblyName}","@l":"Debug","assemblyName":"Microsoft.WebTools.BrowserLink.Net","SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics"}
+{"@t":"2023-01-04T23:36:39.6126518Z","@mt":"Application started. Press Ctrl+C to shut down.","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2023-01-04T23:36:39.6127408Z","@mt":"Hosting environment: {envName}","envName":"Development","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2023-01-04T23:36:39.6127914Z","@mt":"Content root path: {contentRoot}","contentRoot":"C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.WebApi","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2023-01-04T23:36:39.6128399Z","@mt":"Hosting started","@l":"Debug","EventId":{"Id":2},"SourceContext":"Microsoft.Extensions.Hosting.Internal.Host"}
+{"@t":"2023-01-04T23:36:39.6652161Z","@mt":"{HostingRequestStartingLog:l}","@r":["Request starting HTTP/2.0 GET https://localhost:44325/index.html  "],"Protocol":"HTTP/2.0","Method":"GET","ContentType":null,"ContentLength":null,"Scheme":"https","Host":"localhost:44325","PathBase":"","Path":"/index.html","QueryString":"","HostingRequestStartingLog":"Request starting HTTP/2.0 GET https://localhost:44325/index.html  ","EventId":{"Id":1},"SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics","RequestId":"80000047-0000-fa00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|c70b7f5b-4b36d4ecba0f6a77.","TraceId":"c70b7f5b-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:39.7171113Z","@mt":"Wildcard detected, all requests with hosts will be allowed.","@l":"Debug","EventId":{"Name":"WildcardDetected"},"SourceContext":"Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware","RequestId":"80000047-0000-fa00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|c70b7f5b-4b36d4ecba0f6a77.","TraceId":"c70b7f5b-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:39.7523128Z","@mt":"FluentValidationOperationFilter should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"80000047-0000-fa00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|c70b7f5b-4b36d4ecba0f6a77.","TraceId":"c70b7f5b-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:39.7693210Z","@mt":"FluentValidationRules should be registered in services. Hint: Use registration method 'AddFluentValidationRulesToSwagger'","@l":"Warning","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRulesScopeAdapter","RequestId":"80000047-0000-fa00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|c70b7f5b-4b36d4ecba0f6a77.","TraceId":"c70b7f5b-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:39.7704471Z","@mt":"FluentValidationRules Created","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000047-0000-fa00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|c70b7f5b-4b36d4ecba0f6a77.","TraceId":"c70b7f5b-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:39.8496397Z","@mt":"Response markup is scheduled to include browser refresh script injection.","@l":"Debug","EventId":{"Id":1,"Name":"SetUpResponseForBrowserRefresh"},"SourceContext":"Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware","RequestId":"80000047-0000-fa00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|c70b7f5b-4b36d4ecba0f6a77.","TraceId":"c70b7f5b-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:41.0644475Z","@mt":"Response markup was updated to include browser refresh script injection.","@l":"Debug","EventId":{"Id":2,"Name":"BrowserConfiguredForRefreshes"},"SourceContext":"Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware","RequestId":"80000047-0000-fa00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|c70b7f5b-4b36d4ecba0f6a77.","TraceId":"c70b7f5b-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:41.0805276Z","@mt":"{HostingRequestFinishedLog:l}","@r":["Request finished in 1420.4722ms 200 text/html;charset=utf-8"],"ElapsedMilliseconds":1420.4722,"StatusCode":200,"ContentType":"text/html;charset=utf-8","HostingRequestFinishedLog":"Request finished in 1420.4722ms 200 text/html;charset=utf-8","EventId":{"Id":2},"SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics","RequestId":"80000047-0000-fa00-b63f-84710c7967bb","RequestPath":"/index.html","SpanId":"|c70b7f5b-4b36d4ecba0f6a77.","TraceId":"c70b7f5b-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:41.1123673Z","@mt":"{HostingRequestStartingLog:l}","@r":["Request starting HTTP/2.0 GET https://localhost:44325/_framework/aspnetcore-browser-refresh.js  "],"Protocol":"HTTP/2.0","Method":"GET","ContentType":null,"ContentLength":null,"Scheme":"https","Host":"localhost:44325","PathBase":"","Path":"/_framework/aspnetcore-browser-refresh.js","QueryString":"","HostingRequestStartingLog":"Request starting HTTP/2.0 GET https://localhost:44325/_framework/aspnetcore-browser-refresh.js  ","EventId":{"Id":1},"SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics","RequestId":"80000052-0001-fa00-b63f-84710c7967bb","RequestPath":"/_framework/aspnetcore-browser-refresh.js","SpanId":"|c70b7f5c-4b36d4ecba0f6a77.","TraceId":"c70b7f5c-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:41.1297523Z","@mt":"{HostingRequestFinishedLog:l}","@r":["Request finished in 17.4375ms 200 application/javascript; charset=utf-8"],"ElapsedMilliseconds":17.4375,"StatusCode":200,"ContentType":"application/javascript; charset=utf-8","HostingRequestFinishedLog":"Request finished in 17.4375ms 200 application/javascript; charset=utf-8","EventId":{"Id":2},"SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics","RequestId":"80000052-0001-fa00-b63f-84710c7967bb","RequestPath":"/_framework/aspnetcore-browser-refresh.js","SpanId":"|c70b7f5c-4b36d4ecba0f6a77.","TraceId":"c70b7f5c-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:41.9742781Z","@mt":"{HostingRequestStartingLog:l}","@r":["Request starting HTTP/2.0 GET https://localhost:44325/swagger/v1/swagger.json  "],"Protocol":"HTTP/2.0","Method":"GET","ContentType":null,"ContentLength":null,"Scheme":"https","Host":"localhost:44325","PathBase":"","Path":"/swagger/v1/swagger.json","QueryString":"","HostingRequestStartingLog":"Request starting HTTP/2.0 GET https://localhost:44325/swagger/v1/swagger.json  ","EventId":{"Id":1},"SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2739470Z","@mt":"Applying FluentValidation rules to swagger schema 'NovoCliente'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2760704Z","@mt":"Rule 'Required' applied for property 'NovoCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2798014Z","@mt":"Rule 'Required' applied for property 'NovoCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2834186Z","@mt":"Rule 'NotEmpty' applied for property 'NovoCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2872763Z","@mt":"Rule 'Length' applied for property 'NovoCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2887077Z","@mt":"Rule 'Length' applied for property 'NovoCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2907972Z","@mt":"Rule 'Required' applied for property 'NovoCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2909848Z","@mt":"Rule 'Required' applied for property 'NovoCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2914861Z","@mt":"Rule 'NotEmpty' applied for property 'NovoCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2941203Z","@mt":"Rule 'Comparison' applied for property 'NovoCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2942444Z","@mt":"Rule 'Comparison' applied for property 'NovoCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2949745Z","@mt":"Rule 'Required' applied for property 'NovoCliente.sexo'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2951336Z","@mt":"Rule 'Required' applied for property 'NovoCliente.sexo'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2955787Z","@mt":"Rule 'NotEmpty' applied for property 'NovoCliente.sexo'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2958007Z","@mt":"Rule 'Required' applied for property 'NovoCliente.telefone'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2958405Z","@mt":"Rule 'Required' applied for property 'NovoCliente.telefone'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2961457Z","@mt":"Rule 'NotEmpty' applied for property 'NovoCliente.telefone'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2973204Z","@mt":"Rule 'Pattern' applied for property 'NovoCliente.telefone'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2974102Z","@mt":"Rule 'Required' applied for property 'NovoCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2974463Z","@mt":"Rule 'Required' applied for property 'NovoCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2977811Z","@mt":"Rule 'NotEmpty' applied for property 'NovoCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2980804Z","@mt":"Rule 'Length' applied for property 'NovoCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.2983646Z","@mt":"Rule 'Length' applied for property 'NovoCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3715562Z","@mt":"Applying FluentValidation rules to swagger schema 'AlteraCliente'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3716152Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.id'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3717398Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.id'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3717723Z","@mt":"Rule 'NotEmpty' applied for property 'AlteraCliente.id'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3741318Z","@mt":"Rule 'Comparison' applied for property 'AlteraCliente.id'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3780844Z","@mt":"Applying FluentValidation rules to swagger schema 'AlteraCliente'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3781560Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3781916Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3785670Z","@mt":"Rule 'NotEmpty' applied for property 'AlteraCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3789409Z","@mt":"Rule 'Length' applied for property 'AlteraCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3792122Z","@mt":"Rule 'Length' applied for property 'AlteraCliente.nome'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3792868Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3793177Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3795477Z","@mt":"Rule 'NotEmpty' applied for property 'AlteraCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3796204Z","@mt":"Rule 'Comparison' applied for property 'AlteraCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3796703Z","@mt":"Rule 'Comparison' applied for property 'AlteraCliente.dataNascimento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3797489Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.sexo'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3797801Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.sexo'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3800186Z","@mt":"Rule 'NotEmpty' applied for property 'AlteraCliente.sexo'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3801220Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.telefone'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3801552Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.telefone'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3803784Z","@mt":"Rule 'NotEmpty' applied for property 'AlteraCliente.telefone'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3805692Z","@mt":"Rule 'Pattern' applied for property 'AlteraCliente.telefone'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3806837Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3821682Z","@mt":"Rule 'Required' applied for property 'AlteraCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3836107Z","@mt":"Rule 'NotEmpty' applied for property 'AlteraCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3840710Z","@mt":"Rule 'Length' applied for property 'AlteraCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.3843538Z","@mt":"Rule 'Length' applied for property 'AlteraCliente.documento'.","@l":"Debug","SourceContext":"MicroElements.Swashbuckle.FluentValidation.FluentValidationRules","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:42.5709887Z","@mt":"{HostingRequestFinishedLog:l}","@r":["Request finished in 598.0197ms 200 application/json;charset=utf-8"],"ElapsedMilliseconds":598.0197,"StatusCode":200,"ContentType":"application/json;charset=utf-8","HostingRequestFinishedLog":"Request finished in 598.0197ms 200 application/json;charset=utf-8","EventId":{"Id":2},"SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics","RequestId":"80000049-0000-fa00-b63f-84710c7967bb","RequestPath":"/swagger/v1/swagger.json","SpanId":"|c70b7f5d-4b36d4ecba0f6a77.","TraceId":"c70b7f5d-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:48.8765631Z","@mt":"{HostingRequestStartingLog:l}","@r":["Request starting HTTP/2.0 GET https://localhost:44325/api/Clientes  "],"Protocol":"HTTP/2.0","Method":"GET","ContentType":null,"ContentLength":null,"Scheme":"https","Host":"localhost:44325","PathBase":"","Path":"/api/Clientes","QueryString":"","HostingRequestStartingLog":"Request starting HTTP/2.0 GET https://localhost:44325/api/Clientes  ","EventId":{"Id":1},"SourceContext":"Microsoft.AspNetCore.Hosting.Diagnostics","RequestId":"80000054-0001-fa00-b63f-84710c7967bb","RequestPath":"/api/Clientes","SpanId":"|c70b7f5e-4b36d4ecba0f6a77.","TraceId":"c70b7f5e-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:48.8862304Z","@mt":"The request path {Path} does not match a supported file type","@l":"Debug","Path":"/api/Clientes","EventId":{"Id":4,"Name":"FileTypeNotSupported"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware","RequestId":"80000054-0001-fa00-b63f-84710c7967bb","RequestPath":"/api/Clientes","SpanId":"|c70b7f5e-4b36d4ecba0f6a77.","TraceId":"c70b7f5e-4b36d4ecba0f6a77","ParentId":""}
+{"@t":"2023-01-04T23:36:48.9645509Z","@mt":"{CandidateCount} candidate(s) found for the request path '{Path}'","@l":"Debug","CandidateCount":1,"Path":"/api/Clientes","EventId":{"Id":1001,"Name":"CandidatesFound"},"SourceContext":"Microsoft.AspNetCore.Routing.Matching.DfaMatcher","RequestId":"80000054-0001-fa00-b63f-84710c7967bb","RequestPath":"/api/Clientes","SpanId":"|c70b7f5e-4b36d4ecba0f6a77.","TraceId":"c70b7f5e-4b36d4ecba0f6a77","ParentId":""}

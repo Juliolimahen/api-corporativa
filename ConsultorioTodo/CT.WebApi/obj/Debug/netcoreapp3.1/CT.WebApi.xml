@@ -4,6 +4,11 @@
         <name>CT.WebApi</name>
     </assembly>
     <members>
+        <member name="M:CT.WebApi.Configuration.DataBaseConfig.UseDataBaseConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Garantindo integridade estrutural.
+            </summary>
+        </member>
         <member name="M:CT.WebApi.Controllers.ClientesController.Get">
             <summary>
             Retorna todos clientes cadastrados na base.

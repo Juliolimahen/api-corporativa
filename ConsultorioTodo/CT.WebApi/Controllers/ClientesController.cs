@@ -4,6 +4,8 @@ using CT.Manager.Interfaces;
 using CT.Manager.Validator;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using SerilogTimings;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -17,10 +19,12 @@ namespace CT.WebApi.Controllers
     public class ClientesController : ControllerBase
     {
         private readonly IClienteManager _clienteManager;
+        private readonly ILogger<ClientesController> _logger;
 
-        public ClientesController(IClienteManager clienteManager)
+        public ClientesController(IClienteManager clienteManager, ILogger<ClientesController> logger)
         {
             _clienteManager = clienteManager;
+            _logger = logger;
         }
 
         /// <summary>
@@ -56,7 +60,14 @@ namespace CT.WebApi.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Post([FromBody] NovoCliente novoCliente)
         {
-            var clienteInserido = await _clienteManager.InsertClienteAsync(novoCliente);
+            _logger.LogInformation("Objeto recebido Nome {@novoCliente}", novoCliente);
+
+            Cliente clienteInserido;
+            using (Operation.Time("Tempo de adição de um novo cliente."))
+            {
+                _logger.LogInformation("Foi requisitada a inserção de um novo cliente.");
+                clienteInserido = await _clienteManager.InsertClienteAsync(novoCliente);
+            }
             return CreatedAtAction(nameof(Get), new { id = clienteInserido.Id }, clienteInserido);
         }
 
