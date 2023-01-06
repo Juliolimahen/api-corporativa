@@ -39,5 +39,20 @@
             </summary>
             <example>123456678</example>
         </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Cep">
+            <example>17900000</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Cidade">
+            <example>Dracena</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Logradouro">
+            <example>Rua Adamantina</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Numero">
+            <example>13</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Complemento">
+            <example>Ao lado do posto</example>
+        </member>
     </members>
 </doc>

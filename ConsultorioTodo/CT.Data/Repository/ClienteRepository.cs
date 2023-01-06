@@ -21,12 +21,16 @@ namespace CT.Data.Repository
 
         public async Task<IEnumerable<Cliente>> GetClientesAsync()
         {
-            return await _context.Clientes.AsNoTracking().ToListAsync();
+            return await _context.Clientes
+                .Include(c => c.Endereco)
+                .AsNoTracking().ToListAsync();
         }
 
         public async Task<Cliente> GetClienteByIdAsync(int id)
         {
-            return await _context.Clientes.FindAsync(id);
+            return await _context.Clientes
+                .Include(c => c.Endereco)
+                .SingleOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task<Cliente> InsertClienteAsync(Cliente cliente)

@@ -36,6 +36,8 @@ namespace CT.Manager.Validator
 
             RuleFor(x => x.Sexo).NotNull().NotEmpty().Must(IsMorF).WithMessage("Sexo precisa ser M ou F");
 
+            RuleFor(x => x.Endereco)
+                .SetValidator(new NovoEnderecoValidator());
         }
 
         private bool IsMorF(char sexo)

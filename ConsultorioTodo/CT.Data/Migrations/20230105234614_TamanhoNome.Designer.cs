@@ -4,14 +4,16 @@ using CT.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CT.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230105234614_TamanhoNome")]
+    partial class TamanhoNome
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,14 +59,19 @@ namespace CT.Data.Migrations
 
             modelBuilder.Entity("CT.Core.Domain.Endereco", b =>
                 {
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("Cep")
                         .HasColumnType("int");
 
                     b.Property<string>("Cidade")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Complemento")
                         .HasColumnType("nvarchar(max)");
@@ -78,7 +85,10 @@ namespace CT.Data.Migrations
                     b.Property<string>("Numero")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ClienteId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClienteId")
+                        .IsUnique();
 
                     b.ToTable("Enderecos");
                 });

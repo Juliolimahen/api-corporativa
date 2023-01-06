@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20230104175837_teste.cs" />
     <Compile Remove="Migrations\20230104175837_teste.Designer.cs" />
+    <Compile Remove="Migrations\20230105234614_TamanhoNome.cs" />
+    <Compile Remove="Migrations\20230105234614_TamanhoNome.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

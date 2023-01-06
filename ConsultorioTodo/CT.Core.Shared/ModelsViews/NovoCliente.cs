@@ -38,5 +38,7 @@ namespace CT.Core.Shared.ModelsViews
         /// </summary>
         /// <example>123456678</example>
         public string Documento { get; set; }
+
+        public NovoEndereco Endereco{ get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace CT.Manager.Mappings
                 .ForMember(d => d.DataNascimento, o => o.MapFrom(c => c.DataNascimento.Date))
                 //.ReverseMap()
                 ;
+            CreateMap<NovoEndereco, Endereco>();
         }
     }
 }

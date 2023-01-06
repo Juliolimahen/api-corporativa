@@ -1,4 +1,5 @@
 ﻿using CT.Core.Domain;
+using CT.Data.Configuration;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,10 +9,17 @@ namespace CT.Data.Context
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions options) : base(options)
-        {
-        }
-
         public DbSet<Cliente> Clientes { get; set; }
+
+        public DbSet<Endereco> Enderecos { get; set; }
+
+        public AppDbContext(DbContextOptions options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new ClienteConfiguration());
+            modelBuilder.ApplyConfiguration(new EnderecoConfiguration());
+        }
     }
 }
