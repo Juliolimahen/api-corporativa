@@ -31,7 +31,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj": {
+                "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -68,6 +68,9 @@
         }
       },
       "CT.Core.Shared/1.0.0": {
+        "dependencies": {
+          "CT.Core": "1.0.0"
+        },
         "runtime": {
           "CT.Core.Shared.dll": {}
         }

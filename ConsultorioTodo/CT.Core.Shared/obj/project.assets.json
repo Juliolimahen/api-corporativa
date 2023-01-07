@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "CT.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/CT.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CT.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CT.Core/1.0.0": {
+      "type": "project",
+      "path": "../CT.Core/CT.Core.csproj",
+      "msbuildProject": "../CT.Core/CT.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "CT.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\julio\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj": {
+              "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Core\\CT.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

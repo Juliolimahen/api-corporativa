@@ -17,6 +17,7 @@ namespace CT.Manager.Mappings
                 //.ReverseMap()
                 ;
             CreateMap<NovoEndereco, Endereco>();
+            CreateMap<NovoTelefone, Telefone>();
         }
     }
 }

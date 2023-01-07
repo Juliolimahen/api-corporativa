@@ -23,6 +23,7 @@ namespace CT.Data.Repository
         {
             return await _context.Clientes
                 .Include(c => c.Endereco)
+                .Include(c => c.Telefones)
                 .AsNoTracking().ToListAsync();
         }
 
@@ -30,6 +31,7 @@ namespace CT.Data.Repository
         {
             return await _context.Clientes
                 .Include(c => c.Endereco)
+                .Include(c => c.Telefones)
                 .SingleOrDefaultAsync(c => c.Id == id);
         }
 

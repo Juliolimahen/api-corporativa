@@ -29,10 +29,9 @@ namespace CT.Manager.Validator
                 .MinimumLength(4)
                 .MaximumLength(14);
 
-            RuleFor(x => x.Telefone)
+            RuleFor(x => x.Telefones)
                 .NotNull()
-                .NotEmpty()
-                .Matches("[2-9][0-9]{9}").WithMessage("O telefone tem que ter o formato [2 - 9][0 - 9]{9}");
+                .NotEmpty();
 
             RuleFor(x => x.Sexo).NotNull().NotEmpty().Must(IsMorF).WithMessage("Sexo precisa ser M ou F");
 

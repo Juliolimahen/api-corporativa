@@ -27,7 +27,7 @@
             </summary>
             <example>M</example>
         </member>
-        <member name="P:CT.Core.Shared.ModelsViews.NovoCliente.Telefone">
+        <member name="P:CT.Core.Shared.ModelsViews.NovoCliente.Telefones">
             <summary>
             Telefone do cliente.
             </summary>
@@ -53,6 +53,12 @@
         </member>
         <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Complemento">
             <example>Ao lado do posto</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoTelefone.Numero">
+            <summary>
+            Telefone do cliente
+            </summary>
+            <example>18999087778</example>
         </member>
     </members>
 </doc>

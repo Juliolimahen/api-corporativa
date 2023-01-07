@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CT.Core.Domain;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -31,7 +32,7 @@ namespace CT.Core.Shared.ModelsViews
         /// Telefone do cliente.
         /// </summary>
         /// <example>18997000000</example>
-        public string Telefone { get; set; }
+        public ICollection<NovoTelefone> Telefones { get; set; }
 
         /// <summary>
         /// Documento cliente: CNH, CPF e RG.
@@ -39,6 +40,6 @@ namespace CT.Core.Shared.ModelsViews
         /// <example>123456678</example>
         public string Documento { get; set; }
 
-        public NovoEndereco Endereco{ get; set; }
+        public NovoEndereco Endereco { get; set; }
     }
 }
