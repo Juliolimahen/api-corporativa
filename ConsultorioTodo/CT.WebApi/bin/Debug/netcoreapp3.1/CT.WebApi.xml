@@ -39,5 +39,33 @@
             <param name="id" example="123"></param>
             <remarks> Ao excluir um cliente, ele será excluido de forma permanente da base.</remarks>
         </member>
+        <member name="M:CT.WebApi.Controllers.MedicosController.Get">
+            <summary>
+            Retorna todos os médicos.
+            </summary>
+        </member>
+        <member name="M:CT.WebApi.Controllers.MedicosController.Get(System.Int32)">
+            <summary>
+            Retorna um médico consultado via ID
+            </summary>
+            <param name="id" example="123">Id do médico</param>
+        </member>
+        <member name="M:CT.WebApi.Controllers.MedicosController.Post(CT.Core.Shared.ModelsViews.Medico.NovoMedico)">
+            <summary>
+            Insere um novo médico.
+            </summary>
+            <param name="medico"></param>
+        </member>
+        <member name="M:CT.WebApi.Controllers.MedicosController.Put(CT.Core.Shared.ModelsViews.Medico.AlteraMedico)">
+            <summary>
+            Altera um médico
+            </summary>
+        </member>
+        <member name="M:CT.WebApi.Controllers.MedicosController.DeleteAsync(System.Int32)">
+            <summary>
+            Exclui um médico.
+            </summary>
+            <param name="id" example="123">Id do médico</param>
+        </member>
     </members>
 </doc>

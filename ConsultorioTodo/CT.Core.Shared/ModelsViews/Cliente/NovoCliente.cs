@@ -29,17 +29,13 @@ namespace CT.Core.Shared.ModelsViews
         public char Sexo { get; set; }
 
         /// <summary>
-        /// Telefone do cliente.
-        /// </summary>
-        /// <example>18997000000</example>
-        public ICollection<NovoTelefone> Telefones { get; set; }
-
-        /// <summary>
         /// Documento cliente: CNH, CPF e RG.
         /// </summary>
         /// <example>123456678</example>
         public string Documento { get; set; }
 
         public NovoEndereco Endereco { get; set; }
+
+        public ICollection<NovoTelefone> Telefones { get; set; }
     }
 }

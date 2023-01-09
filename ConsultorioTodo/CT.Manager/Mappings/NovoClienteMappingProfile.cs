@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using CT.Core.Domain;
 using CT.Core.Shared.ModelsViews;
+using CT.Core.Shared.ModelsViews.Cliente;
+using CT.Core.Shared.ModelsViews.Endereco;
+using CT.Core.Shared.ModelsViews.Telefone;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,6 +21,9 @@ namespace CT.Manager.Mappings
                 ;
             CreateMap<NovoEndereco, Endereco>();
             CreateMap<NovoTelefone, Telefone>();
+            CreateMap<Cliente, ClienteView>();
+            CreateMap<Endereco, EnderecoView>();
+            CreateMap<Telefone, TelefoneView>();
         }
     }
 }

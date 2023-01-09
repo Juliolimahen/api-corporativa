@@ -15,8 +15,8 @@ namespace CT.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("CT.Core.Domain.Cliente", b =>
@@ -37,8 +37,8 @@ namespace CT.Data.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(200)")
-                        .HasMaxLength(200);
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Sexo")
                         .IsRequired()
@@ -80,6 +80,39 @@ namespace CT.Data.Migrations
                     b.ToTable("Enderecos");
                 });
 
+            modelBuilder.Entity("CT.Core.Domain.Especialidade", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Especialidades");
+                });
+
+            modelBuilder.Entity("CT.Core.Domain.Medico", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Crm")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Medicos");
+                });
+
             modelBuilder.Entity("CT.Core.Domain.Telefone", b =>
                 {
                     b.Property<int>("ClienteId")
@@ -93,6 +126,21 @@ namespace CT.Data.Migrations
                     b.ToTable("Telefones");
                 });
 
+            modelBuilder.Entity("EspecialidadeMedico", b =>
+                {
+                    b.Property<int>("EspecialidadesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MedicosId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EspecialidadesId", "MedicosId");
+
+                    b.HasIndex("MedicosId");
+
+                    b.ToTable("EspecialidadeMedico");
+                });
+
             modelBuilder.Entity("CT.Core.Domain.Endereco", b =>
                 {
                     b.HasOne("CT.Core.Domain.Cliente", "Cliente")
@@ -100,6 +148,8 @@ namespace CT.Data.Migrations
                         .HasForeignKey("CT.Core.Domain.Endereco", "ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("CT.Core.Domain.Telefone", b =>
@@ -109,6 +159,30 @@ namespace CT.Data.Migrations
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Cliente");
+                });
+
+            modelBuilder.Entity("EspecialidadeMedico", b =>
+                {
+                    b.HasOne("CT.Core.Domain.Especialidade", null)
+                        .WithMany()
+                        .HasForeignKey("EspecialidadesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CT.Core.Domain.Medico", null)
+                        .WithMany()
+                        .HasForeignKey("MedicosId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CT.Core.Domain.Cliente", b =>
+                {
+                    b.Navigation("Endereco");
+
+                    b.Navigation("Telefones");
                 });
 #pragma warning restore 612, 618
         }
