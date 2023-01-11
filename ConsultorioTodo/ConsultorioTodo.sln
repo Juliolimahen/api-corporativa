@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.CT.Manager", "02.CT.Mana
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CT.Manager", "CT.Manager\CT.Manager.csproj", "{A2E4A3F8-F184-4E7D-BC47-84C79D6B7A88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.Core.Shared", "CT.Core.Shared\CT.Core.Shared.csproj", "{DD7513BC-288D-44E9-9C4F-EC68BDCA4B96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CT.Core.Shared", "CT.Core.Shared\CT.Core.Shared.csproj", "{DD7513BC-288D-44E9-9C4F-EC68BDCA4B96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

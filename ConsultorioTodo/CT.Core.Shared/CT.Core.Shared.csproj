@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.WebApi\bin\Debug\netcoreapp3.1\CT.Core.Shared.xml</DocumentationFile>
+    <DocumentationFile>C:\ws-projetos\api-corporativa\ConsultorioTodo\CT.WebApi\bin\Debug\netcoreapp6.0\CT.Core.Shared.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

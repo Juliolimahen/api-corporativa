@@ -12,7 +12,6 @@ namespace CT.Core.Shared.ModelsViews.Cliente
         public int Id { get; set; }
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
-
         public SexoView Sexo { get; set; }
         public ICollection<TelefoneView> Telefones { get; set; }
 

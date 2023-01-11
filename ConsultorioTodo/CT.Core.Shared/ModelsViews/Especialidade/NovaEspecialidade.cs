@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CT.Core.Shared.ModelsViews
+namespace CT.Core.Shared.ModelsViews;
+
+public class NovaEspecialidade
 {
-    public class NovaEspecialidade
-    {
-        public string Descricao { get; set; }
-    }
+    public string Descricao { get; set; }
 }

@@ -1,8 +1,9 @@
 ﻿using CT.Core.Shared.ModelsViews;
 using CT.Core.Shared.ModelsViews.Medico;
-using CT.Manager.Implementation;
+using CT.Manager.Managers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SerilogTimings;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -12,11 +13,13 @@ namespace CT.WebApi.Controllers
     [ApiController]
     public class MedicosController : ControllerBase
     {
-        private readonly IMedicoManager manager;
+        private readonly IMedicoManager _medicoManager;
+        private readonly ILogger<MedicosController> _logger;
 
-        public MedicosController(IMedicoManager manager)
+        public MedicosController(IMedicoManager medicoManager, ILogger<MedicosController> logger)
         {
-            this.manager = manager;
+            _medicoManager = medicoManager;
+            _logger = logger;
         }
 
         /// <summary>
@@ -27,7 +30,7 @@ namespace CT.WebApi.Controllers
         [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get()
         {
-            return Ok(await manager.GetMedicosAsync());
+            return Ok(await _medicoManager.GetMedicosAsync());
         }
 
         /// <summary>
@@ -40,7 +43,7 @@ namespace CT.WebApi.Controllers
         [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get(int id)
         {
-            return Ok(await manager.GetMedicoAsync(id));
+            return Ok(await _medicoManager.GetMedicoAsync(id));
         }
 
         /// <summary>
@@ -52,7 +55,14 @@ namespace CT.WebApi.Controllers
         [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Post(NovoMedico medico)
         {
-            var medicoInserido = await manager.InsertMedicoAsync(medico);
+            _logger.LogInformation("Objeto recebido {@medico}", medico);
+
+            MedicoView medicoInserido;
+            using (Operation.Time("Tempo de adição de um novo médico."))
+            {
+                _logger.LogInformation("Foi requisitada a inserção de um novo médico.");
+                medicoInserido = await _medicoManager.InsertMedicoAsync(medico);
+            }
             return CreatedAtAction(nameof(Get), new { id = medicoInserido.Id }, medicoInserido);
         }
 
@@ -65,7 +75,7 @@ namespace CT.WebApi.Controllers
         [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Put(AlteraMedico medico)
         {
-            var medicoAtualizado = await manager.UpdateMedicoAsync(medico);
+            var medicoAtualizado = await _medicoManager.UpdateMedicoAsync(medico);
             if (medicoAtualizado == null)
             {
                 return NotFound();
@@ -83,7 +93,7 @@ namespace CT.WebApi.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            await manager.DeleteMedicoAsync(id);
+            await _medicoManager.DeleteMedicoAsync(id);
             return NoContent();
 
         }

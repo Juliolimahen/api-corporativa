@@ -1,6 +1,8 @@
 ﻿using CT.Core.Domain;
 using CT.Core.Shared.ModelsViews;
+using CT.Core.Shared.ModelsViews.Cliente;
 using CT.Manager.Interfaces;
+using CT.Manager.Interfaces.Managers;
 using CT.Manager.Validator;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using SerilogTimings;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -31,38 +34,50 @@ namespace CT.WebApi.Controllers
         /// Retorna todos clientes cadastrados na base.
         /// </summary>
         [HttpGet]
-        [ProducesResponseType(typeof(Cliente), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ClienteView), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _clienteManager.GetClientesAsync());
+            var clientes = await _clienteManager.GetClientesAsync();
+            if (clientes.Any())
+            {
+                return Ok(clientes);
+            }
+            return NotFound();
         }
 
         /// <summary>
-        /// Retorna um cliente consultado pelo Id. 
+        /// Retorna um cliente consultado pelo id.
         /// </summary>
-        /// <param name="id" example="1"> Id do cliente.</param>
+        /// <param name="id" example="123">Id do cliente.</param>
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(Cliente), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(Cliente), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ClienteView), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get(int id)
         {
-            return Ok(await _clienteManager.GetClienteByIdAsync(id));
+            var cliente = await _clienteManager.GetClienteAsync(id);
+            if (cliente.Id == 0)
+            {
+                return NotFound();
+            }
+            return Ok(cliente);
         }
 
         /// <summary>
-        /// Insere um novo cliente.
+        /// Insere um novo cliente
         /// </summary>
-        /// <param name="novoCliente" ></param>
+        /// <param name="novoCliente"></param>
         [HttpPost]
-        [ProducesResponseType(typeof(Cliente), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ClienteView), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Post([FromBody] NovoCliente novoCliente)
+        public async Task<IActionResult> Post(NovoCliente novoCliente)
         {
-            _logger.LogInformation("Objeto recebido Nome {@novoCliente}", novoCliente);
+            _logger.LogInformation("Objeto recebido {@novoCliente}", novoCliente);
 
-            Cliente clienteInserido;
+            ClienteView clienteInserido;
             using (Operation.Time("Tempo de adição de um novo cliente."))
             {
                 _logger.LogInformation("Foi requisitada a inserção de um novo cliente.");
@@ -75,32 +90,36 @@ namespace CT.WebApi.Controllers
         /// Altera um cliente.
         /// </summary>
         /// <param name="alteraCliente"></param>
-        [HttpPut("{id}")]
-        [ProducesResponseType(typeof(Cliente), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(Cliente), StatusCodes.Status404NotFound)]
+        [HttpPut]
+        [ProducesResponseType(typeof(ClienteView), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Put([FromBody] AlteraCliente alteraCliente)
+        public async Task<IActionResult> Put(AlteraCliente alteraCliente)
         {
-            var clienteAtulizado = await _clienteManager.UpdateClienteByIdAsync(alteraCliente);
-            if (clienteAtulizado == null)
+            var clienteAtualizado = await _clienteManager.UpdateClienteAsync(alteraCliente);
+            if (clienteAtualizado == null)
             {
                 return NotFound();
             }
-            return Ok(clienteAtulizado);
+            return Ok(clienteAtualizado);
         }
 
         /// <summary>
-        /// Deleta um cliente.
+        /// Exclui um cliente.
         /// </summary>
-        /// <param name="id" example="123"></param>
-        /// <remarks> Ao excluir um cliente, ele será excluido de forma permanente da base.</remarks>
+        /// <param name="id" example="123">Id do cliente</param>
+        /// <remarks>Ao excluir um cliente o mesmo será removido permanentemente da base.</remarks>
         [HttpDelete("{id}")]
-        [ProducesResponseType(typeof(Cliente), StatusCodes.Status204NoContent)]
-        [ProducesResponseType(typeof(Cliente), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
-            await _clienteManager.DeleteClienteByIdAsync(id);
+            var clienteExcliudo = await _clienteManager.DeleteClienteAsync(id);
+            if (clienteExcliudo == null)
+            {
+                return NotFound();
+            }
             return NoContent();
         }
     }

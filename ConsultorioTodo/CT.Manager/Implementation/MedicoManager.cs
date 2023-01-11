@@ -2,50 +2,51 @@
 using CT.Core.Domain;
 using CT.Core.Shared.ModelsViews;
 using CT.Core.Shared.ModelsViews.Medico;
-using CT.Manager.Interfaces;
-using System;
+using CT.Manager.Interfaces.Repositories;
+using CT.Manager.Managers;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace CT.Manager.Implementation
+namespace CT.Manager.Implementation;
+public class MedicoManager : IMedicoManager
 {
-    public class MedicoManager : IMedicoManager
+    private readonly IMedicoRepository _repository;
+    private readonly IMapper _mapper;
+    private readonly ILogger<MedicoManager> _logger;
+
+    public MedicoManager(IMedicoRepository repository, IMapper mapper, ILogger<MedicoManager> logger)
     {
-        private readonly IMedicoRepository _repository;
-        private readonly IMapper _mapper;
+        _repository = repository;
+        _mapper = mapper;
+        _logger = logger;
+    }
 
-        public MedicoManager(IMedicoRepository repository, IMapper mapper)
-        {
-            _repository = repository;
-            _mapper = mapper;
-        }
+    public async Task<IEnumerable<MedicoView>> GetMedicosAsync()
+    {
+        return _mapper.Map<IEnumerable<Medico>, IEnumerable<MedicoView>>(await _repository.GetMedicosAsync());
+    }
 
-        public async Task<IEnumerable<MedicoView>> GetMedicosAsync()
-        {
-            return _mapper.Map<IEnumerable<Medico>, IEnumerable<MedicoView>>(await _repository.GetMedicosAsync());
-        }
+    public async Task<MedicoView> GetMedicoAsync(int id)
+    {
+        return _mapper.Map<MedicoView>(await _repository.GetMedicoAsync(id));
+    }
 
-        public async Task<MedicoView> GetMedicoAsync(int id)
-        {
-            return _mapper.Map<MedicoView>(await _repository.GetMedicoAsync(id));
-        }
+    public async Task<MedicoView> InsertMedicoAsync(NovoMedico novoMedico)
+    {
+        _logger.LogInformation("Chamada de negócio para inserir um médico.");
+        var medico = _mapper.Map<Medico>(novoMedico);
+        return _mapper.Map<MedicoView>(await _repository.InsertMedicoAsync(medico));
+    }
 
-        public async Task<MedicoView> InsertMedicoAsync(NovoMedico novoMedico)
-        {
-            var medico = _mapper.Map<Medico>(novoMedico);
-            return _mapper.Map<MedicoView>(await _repository.InsertMedicoAsync(medico));
-        }
+    public async Task<MedicoView> UpdateMedicoAsync(AlteraMedico alteraMedico)
+    {
+        var medico = _mapper.Map<Medico>(alteraMedico);
+        return _mapper.Map<MedicoView>(await _repository.UpdateMedicoAsync(medico));
+    }
 
-        public async Task<MedicoView> UpdateMedicoAsync(AlteraMedico alteraMedico)
-        {
-            var medico = _mapper.Map<Medico>(alteraMedico);
-            return _mapper.Map<MedicoView>(await _repository.UpdateMedicoAsync(medico));
-        }
-
-        public async Task DeleteMedicoAsync(int id)
-        {
-            await _repository.DeleteMedicoAsync(id);
-        }
+    public async Task DeleteMedicoAsync(int id)
+    {
+        await _repository.DeleteMedicoAsync(id);
     }
 }

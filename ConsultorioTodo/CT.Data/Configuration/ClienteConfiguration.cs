@@ -2,16 +2,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CT.Data.Configuration
+namespace CT.Data.Configuration;
+
+public class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
 {
-    public class ClienteConfiguration : IEntityTypeConfiguration<Cliente>
+    public void Configure(EntityTypeBuilder<Cliente> builder)
     {
-        public void Configure(EntityTypeBuilder<Cliente> builder)
-        {
-            builder.Property(x => x.Nome).HasMaxLength(200).IsRequired();
-        }
+        builder.Property(p => p.Nome).HasMaxLength(200).IsRequired();
+        builder.Property(p => p.Sexo).HasConversion(
+            p => p.ToString(),
+            p => (Sexo)Enum.Parse(typeof(Sexo), p));
     }
 }

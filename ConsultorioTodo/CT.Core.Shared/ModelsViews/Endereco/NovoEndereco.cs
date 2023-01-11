@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CT.Core.Shared.ModelsViews.Endereco;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,15 +7,16 @@ namespace CT.Core.Shared.ModelsViews
 {
     public class NovoEndereco
     {
-        ///<example>17900000</example>
+
+        ///<example>179000000</example>
         public int Cep { get; set; }
 
-        public string Estado { get; set; }
+        public EstadoView Estado { get; set; }
 
         ///<example>Dracena</example>
         public string Cidade { get; set; }
 
-        ///<example>Rua Adamantina</example>
+        ///<example>Rua A</example>
         public string Logradouro { get; set; }
 
         ///<example>13</example>

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CT.Core.Shared.ModelsViews
+namespace CT.Core.Shared.ModelsViews;
+
+public class MedicoView
 {
-    public class MedicoView
-    {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public int Crm { get; set; }
-        public ICollection<EspecialidadeView> Especialidades { get; set; }
-    }
+    public int Id { get; set; }
+    public string Nome { get; set; }
+    public int Crm { get; set; }
+
+    public ICollection<EspecialidadeView> Especialidades { get; set; }
 }

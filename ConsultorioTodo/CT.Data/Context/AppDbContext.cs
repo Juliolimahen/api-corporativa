@@ -1,9 +1,6 @@
 ﻿using CT.Core.Domain;
 using CT.Data.Configuration;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CT.Data.Context
 {
@@ -20,6 +17,7 @@ namespace CT.Data.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
             modelBuilder.ApplyConfiguration(new ClienteConfiguration());
             modelBuilder.ApplyConfiguration(new EnderecoConfiguration());
             modelBuilder.ApplyConfiguration(new TelefoneConfiguration());

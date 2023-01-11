@@ -22,57 +22,55 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CT.WebApi
+namespace CT.WebApi;
+
+public class Startup
 {
-    public class Startup
+    public Startup(IConfiguration configuration)
     {
-        public Startup(IConfiguration configuration)
+        Configuration = configuration;
+    }
+
+    public IConfiguration Configuration { get; }
+
+    // This method gets called by the runtime. Use this method to add services to the container.
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddControllers();
+
+        //services.AddJwtTConfiguration(Configuration);
+
+        services.AddFluentValidationConfiguration();
+
+        services.AddAutoMapperConfiguration();
+
+        services.AddDataBaseConfiguration(Configuration);
+
+        services.AddDependencyInjectionConfiguration();
+
+        services.AddSwaggerConfiguration();
+    }
+
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        app.UseExceptionHandler("/error");
+
+        if (env.IsDevelopment())
         {
-            Configuration = configuration;
+            app.UseDeveloperExceptionPage();
         }
 
-        public IConfiguration Configuration { get; }
+        app.UseDataBaseConfiguration();
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddControllers();
+        app.UseSwaggerConfiguration();
 
-            services.AddFluentValidationConfiguration();
+        app.UseHttpsRedirection();
 
-            services.AddAutoMapperConfiguration();
+        app.UseRouting();
 
-            services.AddDataBaseConfiguration(Configuration);
+        // app.UseJwtConfiguration();
 
-            services.AddDependencyInjectionConfiguration();
-
-            services.AddSwaggerConfiguration();
-        }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            app.UseExceptionHandler("/error");
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.UseDataBaseConfiguration();
-
-            app.UseSwaggerConfiguration();
-
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
-        }
+        app.UseEndpoints(endpoints => endpoints.MapControllers());
     }
 }

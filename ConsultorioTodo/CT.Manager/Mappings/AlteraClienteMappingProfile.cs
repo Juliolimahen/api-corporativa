@@ -2,20 +2,15 @@
 using CT.Core.Domain;
 using CT.Core.Shared.ModelsViews;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CT.Manager.Mappings
+namespace CT.Manager.Mappings;
+
+public class AlteraClienteMappingProfile : Profile
 {
-    public class AlteraClienteMappingProfile : Profile
+    public AlteraClienteMappingProfile()
     {
-        public AlteraClienteMappingProfile()
-        {
-            CreateMap<AlteraCliente, Cliente>()
-                .ForMember(d => d.UltimaAtualizacao, o => o.MapFrom(x => DateTime.Now))
-                .ForMember(d => d.DataNascimento, o => o.MapFrom(x => x.DataNascimento.Date))
-                //.ReverseMap()
-                ;
-        }
+        CreateMap<AlteraCliente, Cliente>()
+            .ForMember(d => d.UltimaAtualizacao, o => o.MapFrom(x => DateTime.Now))
+            .ForMember(d => d.DataNascimento, o => o.MapFrom(x => x.DataNascimento.Date));
     }
 }

@@ -1,4 +1,5 @@
-﻿using CT.Core.Domain;
+﻿
+using CT.Core.Shared.ModelsViews.Cliente;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,27 +12,27 @@ namespace CT.Core.Shared.ModelsViews
     public class NovoCliente
     {
         /// <summary>
-        /// Nome o cliente.
+        /// Nome do cliente
         /// </summary>
         /// <example>Irineu Silva</example>
         public string Nome { get; set; }
 
         /// <summary>
-        /// Data de nascimetodo cliente.
+        /// Data do nascimento do cliente.
         /// </summary>
-        /// <example>1995-01-01</example>
+        /// <example>1990-03-01</example>
         public DateTime DataNascimento { get; set; }
 
         /// <summary>
-        /// Sexo do cliente.
+        /// Sexo do cliente
         /// </summary>
         /// <example>M</example>
-        public char Sexo { get; set; }
+        public SexoView Sexo { get; set; }
 
         /// <summary>
-        /// Documento cliente: CNH, CPF e RG.
+        /// Documento do cliente: CNH, CPF, RG
         /// </summary>
-        /// <example>123456678</example>
+        /// <example>1234123223</example>
         public string Documento { get; set; }
 
         public NovoEndereco Endereco { get; set; }

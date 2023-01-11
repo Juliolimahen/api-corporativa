@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CT.Core.Shared.ModelsViews
+namespace CT.Core.Shared.ModelsViews;
+
+public class ReferenciaEspecialidade
 {
-    public class ReferenciaEspecialidade
-    {
-        public int Id { get; set; }
-    }
+    public int Id { get; set; }
 }

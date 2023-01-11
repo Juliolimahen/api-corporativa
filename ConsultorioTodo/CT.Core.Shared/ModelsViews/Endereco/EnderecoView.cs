@@ -6,7 +6,7 @@ namespace CT.Core.Shared.ModelsViews.Endereco
 {
     public class EnderecoView : ICloneable
     {
-        public int CEP { get; set; }
+        public int Cep { get; set; }
         public EstadoView Estado { get; set; }
         public string Cidade { get; set; }
         public string Logradouro { get; set; }

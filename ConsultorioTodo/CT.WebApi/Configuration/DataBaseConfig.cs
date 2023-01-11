@@ -4,24 +4,21 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CT.WebApi.Configuration
-{
-    public static class DataBaseConfig
-    {
-        public static void AddDataBaseConfiguration(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-        }
+namespace CT.WebApi.Configuration;
 
-        /// <summary>
-        /// Garantindo integridade estrutural.
-        /// </summary>
-        public static void UseDataBaseConfiguration(this IApplicationBuilder app)
-        {
-            using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
-            using var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
-            context.Database.Migrate();
-            context.Database.EnsureCreated();
-        }
+public static class DataBaseConfig
+{
+
+    public static void AddDataBaseConfiguration(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+    }
+
+    public static void UseDataBaseConfiguration(this IApplicationBuilder app)
+    {
+        using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+        using var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
+        context.Database.Migrate();
+        context.Database.EnsureCreated();
     }
 }
