@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CT.FakeData\CT.FakeData.csproj" />
     <ProjectReference Include="..\CT.Manager\CT.Manager.csproj" />
     <ProjectReference Include="..\CT.WebApi\CT.WebApi.csproj" />
   </ItemGroup>

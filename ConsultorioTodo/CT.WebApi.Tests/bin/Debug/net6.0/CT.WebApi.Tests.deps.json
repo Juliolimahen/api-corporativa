@@ -9,6 +9,7 @@
       "CT.WebApi.Tests/1.0.0": {
         "dependencies": {
           "Bogus": "33.0.2",
+          "CT.FakeData": "1.0.0",
           "CT.Manager": "1.0.0",
           "CT.WebApi": "1.0.0",
           "FluentAssertions": "5.10.3",
@@ -1911,6 +1912,15 @@
           "CT.Data.dll": {}
         }
       },
+      "CT.FakeData/1.0.0": {
+        "dependencies": {
+          "Bogus": "33.0.2",
+          "CT.Core.Shared": "1.0.0"
+        },
+        "runtime": {
+          "CT.FakeData.dll": {}
+        }
+      },
       "CT.Manager/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
@@ -3186,6 +3196,11 @@
       "sha512": ""
     },
     "CT.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CT.FakeData/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

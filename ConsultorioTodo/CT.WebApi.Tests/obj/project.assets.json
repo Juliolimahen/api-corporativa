@@ -2827,6 +2827,20 @@
           "bin/placeholder/CT.Data.dll": {}
         }
       },
+      "CT.FakeData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Bogus": "33.0.2",
+          "CT.Core.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CT.FakeData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CT.FakeData.dll": {}
+        }
+      },
       "CT.Manager/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -9323,6 +9337,11 @@
       "path": "../CT.Data/CT.Data.csproj",
       "msbuildProject": "../CT.Data/CT.Data.csproj"
     },
+    "CT.FakeData/1.0.0": {
+      "type": "project",
+      "path": "../CT.FakeData/CT.FakeData.csproj",
+      "msbuildProject": "../CT.FakeData/CT.FakeData.csproj"
+    },
     "CT.Manager/1.0.0": {
       "type": "project",
       "path": "../CT.Manager/CT.Manager.csproj",
@@ -9337,6 +9356,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Bogus >= 33.0.2",
+      "CT.FakeData >= 1.0.0",
       "CT.Manager >= 1.0.0",
       "CT.WebApi >= 1.0.0",
       "FluentAssertions >= 5.10.3",
@@ -9379,6 +9399,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.FakeData\\CT.FakeData.csproj": {
+              "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.FakeData\\CT.FakeData.csproj"
+            },
             "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Manager\\CT.Manager.csproj": {
               "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.Manager\\CT.Manager.csproj"
             },

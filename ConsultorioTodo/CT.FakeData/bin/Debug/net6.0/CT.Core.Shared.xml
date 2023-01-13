@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CT.Core.Shared</name>
+    </assembly>
+    <members>
+        <member name="T:CT.Core.Shared.ModelsViews.NovoCliente">
+            <summary>
+            Objeto utilizado para inserção de um novo cliente.
+            </summary>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoCliente.Nome">
+            <summary>
+            Nome do cliente
+            </summary>
+            <example>Irineu Silva</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoCliente.DataNascimento">
+            <summary>
+            Data do nascimento do cliente.
+            </summary>
+            <example>1990-03-01</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoCliente.Sexo">
+            <summary>
+            Sexo do cliente
+            </summary>
+            <example>M</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoCliente.Documento">
+            <summary>
+            Documento do cliente: CNH, CPF, RG
+            </summary>
+            <example>1234123223</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Cep">
+            <example>179000000</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Cidade">
+            <example>Dracena</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Logradouro">
+            <example>Rua A</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Numero">
+            <example>13</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoEndereco.Complemento">
+            <example>Ao lado do posto</example>
+        </member>
+        <member name="P:CT.Core.Shared.ModelsViews.NovoTelefone.Numero">
+            <summary>
+            Telefone do cliente
+            </summary>
+            <example>18999087778</example>
+        </member>
+    </members>
+</doc>
