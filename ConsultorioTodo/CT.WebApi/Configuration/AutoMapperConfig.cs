@@ -10,8 +10,9 @@ public static class AutoMapperConfig
         services.AddAutoMapper(
             typeof(NovoClienteMappingProfile),
             typeof(AlteraClienteMappingProfile),
-            typeof(NovoMedicoMappingProfile)
-            );
+            typeof(NovoMedicoMappingProfile),
+            typeof(UsuarioMappingProfile));
+
     }
 }
 

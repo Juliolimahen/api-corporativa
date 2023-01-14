@@ -101,6 +101,22 @@ namespace CT.Data.Migrations
                     b.ToTable("Especialidades");
                 });
 
+            modelBuilder.Entity("CT.Core.Domain.Funcao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Funcoes");
+                });
+
             modelBuilder.Entity("CT.Core.Domain.Medico", b =>
                 {
                     b.Property<int>("Id")
@@ -133,6 +149,19 @@ namespace CT.Data.Migrations
                     b.ToTable("Telefones");
                 });
 
+            modelBuilder.Entity("CT.Core.Domain.Usuario", b =>
+                {
+                    b.Property<string>("Login")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Senha")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Login");
+
+                    b.ToTable("Usuarios");
+                });
+
             modelBuilder.Entity("EspecialidadeMedico", b =>
                 {
                     b.Property<int>("EspecialidadesId")
@@ -146,6 +175,21 @@ namespace CT.Data.Migrations
                     b.HasIndex("MedicosId");
 
                     b.ToTable("EspecialidadeMedico");
+                });
+
+            modelBuilder.Entity("FuncaoUsuario", b =>
+                {
+                    b.Property<int>("FuncoesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UsuariosLogin")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("FuncoesId", "UsuariosLogin");
+
+                    b.HasIndex("UsuariosLogin");
+
+                    b.ToTable("FuncaoUsuario");
                 });
 
             modelBuilder.Entity("CT.Core.Domain.Endereco", b =>
@@ -181,6 +225,21 @@ namespace CT.Data.Migrations
                     b.HasOne("CT.Core.Domain.Medico", null)
                         .WithMany()
                         .HasForeignKey("MedicosId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("FuncaoUsuario", b =>
+                {
+                    b.HasOne("CT.Core.Domain.Funcao", null)
+                        .WithMany()
+                        .HasForeignKey("FuncoesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CT.Core.Domain.Usuario", null)
+                        .WithMany()
+                        .HasForeignKey("UsuariosLogin")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
