@@ -30,8 +30,7 @@ public class UsuariosController : ControllerBase
         return Unauthorized();
     }
 
-    //[Authorize(Roles = "Presidente, Lider")]
-    [Authorize]
+    [Authorize(Roles = "Presidente, Lider")]
     [HttpGet]
     public async Task<IActionResult> Get()
     {

@@ -14,32 +14,32 @@ namespace CT.Manager.Implementation;
 
 public class UsuarioManager : IUsuarioManager
 {
-    private readonly IUsuarioRepository repository;
-    private readonly IMapper mapper;
-    private readonly IJwtService jwt;
+    private readonly IUsuarioRepository _repository;
+    private readonly IMapper _mapper;
+    private readonly IJwtService _jwt;
 
     public UsuarioManager(IUsuarioRepository repository, IMapper mapper, IJwtService jwt)
     {
-        this.repository = repository;
-        this.mapper = mapper;
-        this.jwt = jwt;
+        _repository = repository;
+        _mapper = mapper;
+        _jwt = jwt;
     }
 
     public async Task<IEnumerable<UsuarioView>> GetAsync()
     {
-        return mapper.Map<IEnumerable<Usuario>, IEnumerable<UsuarioView>>(await repository.GetAsync());
+        return _mapper.Map<IEnumerable<Usuario>, IEnumerable<UsuarioView>>(await _repository.GetAsync());
     }
 
     public async Task<UsuarioView> GetAsync(string login)
     {
-        return mapper.Map<UsuarioView>(await repository.GetAsync(login));
+        return _mapper.Map<UsuarioView>(await _repository.GetAsync(login));
     }
 
     public async Task<UsuarioView> InsertAsync(NovoUsuario novoUsuario)
     {
-        var usuario = mapper.Map<Usuario>(novoUsuario);
+        var usuario = _mapper.Map<Usuario>(novoUsuario);
         ConverteSenhaEmHash(usuario);
-        return mapper.Map<UsuarioView>(await repository.InsertAsync(usuario));
+        return _mapper.Map<UsuarioView>(await _repository.InsertAsync(usuario));
     }
 
     private static void ConverteSenhaEmHash(Usuario usuario)
@@ -51,20 +51,20 @@ public class UsuarioManager : IUsuarioManager
     public async Task<UsuarioView> UpdateMedicoAsync(Usuario usuario)
     {
         ConverteSenhaEmHash(usuario);
-        return mapper.Map<UsuarioView>(await repository.UpdateAsync(usuario));
+        return _mapper.Map<UsuarioView>(await _repository.UpdateAsync(usuario));
     }
 
     public async Task<UsuarioLogado> ValidaUsuarioEGeraTokenAsync(Usuario usuario)
     {
-        var usuarioConsultado = await repository.GetAsync(usuario.Login);
+        var usuarioConsultado = await _repository.GetAsync(usuario.Login);
         if (usuarioConsultado == null)
         {
             return null;
         }
         if (await ValidaEAtualizaHashAsync(usuario, usuarioConsultado.Senha))
         {
-            var usuarioLogado = mapper.Map<UsuarioLogado>(usuarioConsultado);
-            usuarioLogado.Token = jwt.GerarToken(usuarioConsultado);
+            var usuarioLogado = _mapper.Map<UsuarioLogado>(usuarioConsultado);
+            usuarioLogado.Token = _jwt.GerarToken(usuarioConsultado);
             return usuarioLogado;
         }
         return null;
