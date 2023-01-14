@@ -11,18 +11,18 @@ namespace CT.WebApi.Controllers;
 [ApiController]
 public class UsuariosController : ControllerBase
 {
-    private readonly IUsuarioManager _manager;
+    private readonly IUsuarioManager manager;
 
     public UsuariosController(IUsuarioManager manager)
     {
-        _manager = manager;
+        this.manager = manager;
     }
 
     [HttpGet]
     [Route("Login")]
     public async Task<IActionResult> Login([FromBody] Usuario usuario)
     {
-        var usuarioLogado = await _manager.ValidaUsuarioEGeraTokenAsync(usuario);
+        var usuarioLogado = await manager.ValidaUsuarioEGeraTokenAsync(usuario);
         if (usuarioLogado != null)
         {
             return Ok(usuarioLogado);
@@ -30,19 +30,20 @@ public class UsuariosController : ControllerBase
         return Unauthorized();
     }
 
-    [Authorize(Roles = "Presidente, Lider")]
+    //[Authorize(Roles = "Presidente, Lider")]
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Get()
     {
         string login = User.Identity.Name;
-        var usuario = await _manager.GetAsync(login);
+        var usuario = await manager.GetAsync(login);
         return Ok(usuario);
     }
 
     [HttpPost]
     public async Task<IActionResult> Post(NovoUsuario usuario)
     {
-        var usuarioInserido = await _manager.InsertAsync(usuario);
+        var usuarioInserido = await manager.InsertAsync(usuario);
         return CreatedAtAction(nameof(Get), new { login = usuario.Login }, usuarioInserido);
     }
 }

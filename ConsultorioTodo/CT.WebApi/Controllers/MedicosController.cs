@@ -1,6 +1,7 @@
 ﻿using CT.Core.Shared.ModelsViews;
 using CT.Core.Shared.ModelsViews.Medico;
 using CT.Manager.Managers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SerilogTimings;
@@ -11,6 +12,7 @@ namespace CT.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MedicosController : ControllerBase
     {
         private readonly IMedicoManager _medicoManager;

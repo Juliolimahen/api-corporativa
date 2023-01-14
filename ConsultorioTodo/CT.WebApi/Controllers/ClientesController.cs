@@ -4,6 +4,7 @@ using CT.Core.Shared.ModelsViews.Cliente;
 using CT.Manager.Interfaces;
 using CT.Manager.Interfaces.Managers;
 using CT.Manager.Validator;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -19,6 +20,7 @@ namespace CT.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ClientesController : ControllerBase
     {
         private readonly IClienteManager _clienteManager;
