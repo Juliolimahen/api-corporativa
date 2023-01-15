@@ -32,7 +32,12 @@ namespace CT.WebApi.Controllers
         [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _medicoManager.GetMedicosAsync());
+            var medicos = await _medicoManager.GetMedicosAsync();
+            if (medicos.Any())
+            {
+                return Ok(medicos);
+            }
+            return NotFound();
         }
 
         /// <summary>
@@ -45,7 +50,12 @@ namespace CT.WebApi.Controllers
         [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get(int id)
         {
-            return Ok(await _medicoManager.GetMedicoAsync(id));
+            var medico = await _medicoManager.GetMedicoAsync(id);
+            if (medico.Id == 0)
+            {
+                return NotFound();
+            }
+            return Ok(medico);
         }
 
         /// <summary>
@@ -95,9 +105,12 @@ namespace CT.WebApi.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            await _medicoManager.DeleteMedicoAsync(id);
+            var medicoExcluido = await _medicoManager.DeleteMedicoAsync(id);
+            if (medicoExcluido == null)
+            {
+                return NotFound();
+            }
             return NoContent();
-
         }
     }
 }

@@ -9,8 +9,8 @@ public class NovoMedicoMappingProfile : Profile
 {
     public NovoMedicoMappingProfile()
     {
-        CreateMap<NovoMedico, Medico>();
-        CreateMap<Medico, MedicoView>();
+        CreateMap<NovoMedico, Medico>().ReverseMap();
+        CreateMap<Medico, MedicoView>().ReverseMap();
         CreateMap<Especialidade, ReferenciaEspecialidade>().ReverseMap();
         CreateMap<Especialidade, EspecialidadeView>().ReverseMap();
         CreateMap<Especialidade, NovaEspecialidade>().ReverseMap();

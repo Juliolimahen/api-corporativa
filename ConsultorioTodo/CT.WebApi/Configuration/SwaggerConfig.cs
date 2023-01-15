@@ -67,7 +67,7 @@ public static class SwaggerConfig
             xmlPath = Path.Combine(AppContext.BaseDirectory, "CT.Core.Shared.xml");
             c.IncludeXmlComments(xmlPath);
 
-            c.AddFluentValidationRulesScoped();
+            //c.AddFluentValidationRulesScoped();
         });
     }
     public static void UseSwaggerConfiguration(this IApplicationBuilder app)

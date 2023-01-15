@@ -45,8 +45,9 @@ public class MedicoManager : IMedicoManager
         return _mapper.Map<MedicoView>(await _repository.UpdateMedicoAsync(medico));
     }
 
-    public async Task DeleteMedicoAsync(int id)
+    public async Task<MedicoView> DeleteMedicoAsync(int id)
     {
-        await _repository.DeleteMedicoAsync(id);
+       var medico = await _repository.DeleteMedicoAsync(id);
+       return _mapper.Map<MedicoView>(medico);
     }
 }
