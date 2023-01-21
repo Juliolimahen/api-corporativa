@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CT.Core.Shared.ModelsViews.Endereco
-{
-    public class EnderecoView : ICloneable
-    {
-        public int Cep { get; set; }
-        public EstadoView Estado { get; set; }
-        public string Cidade { get; set; }
-        public string Logradouro { get; set; }
-        public string Numero { get; set; }
-        public string Complemento { get; set; }
+namespace CT.Core.Shared.ModelsViews.Endereco;
 
-        public object Clone()
-        {
-            return MemberwiseClone();
-        }
+public class EnderecoView : ICloneable
+{
+    public int Cep { get; set; }
+    public EstadoView Estado { get; set; }
+    public string Cidade { get; set; }
+    public string Logradouro { get; set; }
+    public string Numero { get; set; }
+    public string Complemento { get; set; }
+
+    public object Clone()
+    {
+        return MemberwiseClone();
     }
 }

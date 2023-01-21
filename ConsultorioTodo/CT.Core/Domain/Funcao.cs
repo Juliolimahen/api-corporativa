@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CT.Core.Domain
-{
-    public class Funcao
-    {
-        public int Id { get; set; }
-        public string Descricao { get; set; }
+namespace CT.Core.Domain;
 
-        public ICollection<Usuario> Usuarios { get; set; }
-    }
+public class Funcao
+{
+    public int Id { get; set; }
+    public string Descricao { get; set; }
+
+    public ICollection<Usuario> Usuarios { get; set; }
 }

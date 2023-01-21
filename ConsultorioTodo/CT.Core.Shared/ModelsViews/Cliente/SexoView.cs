@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CT.Core.Shared.ModelsViews.Cliente
+namespace CT.Core.Shared.ModelsViews.Cliente;
+
+public enum SexoView
 {
-    public enum SexoView
-    {
-        M,
-        F
-    }
+    M,
+    F
 }

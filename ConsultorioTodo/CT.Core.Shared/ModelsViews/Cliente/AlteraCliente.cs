@@ -3,10 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CT.Core.Shared.ModelsViews
+namespace CT.Core.Shared.ModelsViews;
+
+public class AlteraCliente: NovoCliente
 {
-    public class AlteraCliente: NovoCliente
-    {
-        public int Id { get; set; }
-    }
+    public int Id { get; set; }
 }
