@@ -5,10 +5,7 @@
 
 # Sobre o projeto
 
-https://juliohensdsmovie.netlify.app/
-
-O projeto consiste em uma api de uma clínica médica. 
-
+O projeto consiste em uma api de uma clínica médica. A api possuí testes de unidade e integração e também conte com um sistema de autenticação com token JWT. 
 
 ## Layout web
 ![Endpoints](https://raw.githubusercontent.com/Juliolimahen/assets/main/api-corporativa/endpoints1.png) ![Endpoints](https://raw.githubusercontent.com/Juliolimahen/assets/main/api-corporativa/endpoints2.png)
