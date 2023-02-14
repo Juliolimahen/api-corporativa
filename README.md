@@ -7,7 +7,7 @@
 
 https://juliohensdsmovie.netlify.app/
 
-O projeto consiste em um sistema de avaliação de filmes. 
+O projeto consiste em uma api de uma clínica médica. 
 
 
 ## Layout web
