@@ -12,7 +12,6 @@ public static class AutoMapperConfig
             typeof(AlteraClienteMappingProfile),
             typeof(NovoMedicoMappingProfile),
             typeof(UsuarioMappingProfile));
-
     }
 }
 

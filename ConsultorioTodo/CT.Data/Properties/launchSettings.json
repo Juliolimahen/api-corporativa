@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "CT.Data": {
+      "commandName": "Project",
+      "jsWebView2Debugging": true,
+      "remoteDebugEnabled": false
+    }
+  }
+}

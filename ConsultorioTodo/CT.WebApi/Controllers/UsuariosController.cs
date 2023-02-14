@@ -46,4 +46,3 @@ public class UsuariosController : ControllerBase
         return CreatedAtAction(nameof(Get), new { login = usuario.Login }, usuarioInserido);
     }
 }
-

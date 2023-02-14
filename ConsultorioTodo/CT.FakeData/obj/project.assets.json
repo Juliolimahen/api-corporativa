@@ -5,10 +5,14 @@
       "Bogus/33.0.2": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Bogus.dll": {}
+          "lib/netstandard2.0/Bogus.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Bogus.dll": {}
+          "lib/netstandard2.0/Bogus.dll": {
+            "related": ".xml"
+          }
         }
       },
       "CT.Core/1.0.0": {
@@ -72,8 +76,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\julio\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\DevPC\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -81,15 +85,14 @@
       "projectUniqueName": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.FakeData\\CT.FakeData.csproj",
       "projectName": "CT.FakeData",
       "projectPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.FakeData\\CT.FakeData.csproj",
-      "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\DevPC\\.nuget\\packages\\",
       "outputPath": "C:\\ws-projetos\\api-corporativa\\ConsultorioTodo\\CT.FakeData\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\DevPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -130,7 +133,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -139,7 +143,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
